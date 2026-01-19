@@ -1,194 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Goth Thriller</title> <!--titulo da pagina-->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+<title>Cinneview</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
 
+<body>
+      <!---botão--->
+<button id="loginBtn" class="login-icon">👤</button>
 
-    <center><h1 class="logo">Goth Thriller</h1></center>
-   
-    <header class="site-header">
+      <!---modal login--->
+<div id="authModal" hidden>
+  <div class="auth-box">
+    <button id="closeAuth">✕</button>
 
-    <nav class="main-nav">
-    <a href="index.html" class="active">Início</a>
-    <a href="favoritos.html">Favoritos</a>
-    <a href="index1.html">Séries em Destaque</a> <br><!--links para as paginas início, favs e séries em destaque-->
-    <a href="tabela.html">Tabela</a>
+    
+    <form id="loginForm">
+      <h3>Login</h3>
+      <input id="loginUser" placeholder="Usuário" required>
+      <input id="loginPass" type="password" placeholder="Senha" required>
+
+      <button>Entrar</button>
+      <p><a id="goRegister">Criar conta</a></p>
+
+    </form>
+
+        <!---registro--->
+    <form id="registerForm" hidden>
+      <h3>Cadastro</h3>
+      <input id="regUser" placeholder="Usuário" required>
+      <input id="regPass" type="password" placeholder="Senha" required>
+      <button>Cadastrar</button>
+      <p><a id="goLogin">Já tenho conta</a></p>
+    </form>
+  </div>
+</div>
+
+<header>
+
+  <h1> Cinneview</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="avaliacoes.html">Avaliações</a>
+    <a href="ranking.html">Ranking</a>
     <a href="contato.html">Contato</a>
-    <button id="btnTema" type="button" aria-pressed="false" title="Alternar tema">Tema</button>
-   
-
-    </nav>
+    <button id="btnTema" type="button" title="Alternar tema">Tema</button>
+  </nav>
 </header>
-    <center><img src="img\capa-gothic.png"width="1150" height="350"> </center> <br>
-    <Center> 
-    <button id="authBtn" type="button">Entrar</button> 
-     ✦<button id="authCreateBtn" type="button">Criar conta</button>
-  </Center>
 
-    <main class="container">
-    <section class="intro">
-    <h2>🕸️Bem-vindo(a)</h2>
-    <p>Este site é uma pequena vitrine dedicada a filmes e séries com estética e temas góticos: atmosfera sombria, histórias de mistério, romance melancólico e elementos sobrenaturais. Navegue, veja meus favoritos e confira as séries em destaque.</p>
-    <br>
-    <b>
-      <center><p><i><big>"Na penumbra da existência, encontramos nossa verdadeira essência."</big></i></p></center>
-    
-      <br>
-      <br>
+<main class="container">
 
-    </section>
-
-    
-<section class="grid-posters">
-
-<article class="card">
-  <div class="poster poster-large">
-
-    <center><h3>Drácula de Bram Stoker (1992)</h3></center>
-    <center><img src="img\Dracula_(1992).jpg"width="200" height="300"></center><br>
-    <center><p>Uma releitura visualmente rica do clássico vampírico: o Conde Drácula viaja da Transilvânia até Londres para encontrar sua amada reencarnada, enquanto Jonathan Harker e Van Helsing lutam contra o mal que ele representa.</p></center>
-    <center><a href="https://www.primevideo.com/-/pt/detail/0J7Y9UEV735DEQLEAQA42T0VOS/ref=atv_dp_share_cu_r" download>Assista aqui</a></center> <br>
-
-</article>
-
-
-<article class="card">
-  <div class="poster">
-
+     <div class="search">
+    <input type="text" placeholder="Pesquisar filme...">
+    <button>Buscar</button>
   </div>
-    <center><h3>Entrevista com o Vampiro (1994)</h3></center>
-    <center><img src="img\Interview_with_a_Vampire.jpg"width="200" height="300"></center>
-    <center><p>Adaptação do romance de Anne Rice — acompanha Louis e Lestat, vampiros que navegam pela imortalidade, culpa e desejo de conexão, enquanto descobrem os horrores e prazeres da vida eterna.</p> <br> <br></center>
-    <center><a href="https://www.primevideo.com/-/pt/detail/0N0CRCUDNO25T46DEC2DEIP746/ref=atv_dp_share_cu_r" download>Assista aqui</a></center> <br>
+
+  
+  <section class="grid">
+
+<article class="card">
+  <h3>O Escuro e o Perverso (2020)</h3>
+  <img src="img/the_dark_and_the_wicked.jpg" alt="The Dark and the Wicked">
+  <p>Família isolada é tomada por uma escuridão opressiva — terror psicológico, silencioso e inexorável.</p>
+  <span>⭐ Nota média: 9.5</span>
+  <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+</div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com/detail/The-Dark-and-the-Wicked/0KRID6MDN9927DO124G9YEVXG1" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com/br/movie/demoniaca/umc.cmc.52zo5vf92rxdxw5mozl9qy47g?action=play" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com/watch?v=FwN8Crl_DxQ" target="_blank" rel="noopener">Trailer</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <h3>O Ritual (The Ritual)</h3>
+  <img src="img/the_ritual.jpg" alt="The Ritual">
+  <p>Dois padres enfrentam o desconhecido e ritos que testam fé e sanidade — terror sobrenatural.</p>
+  <span>⭐ Nota média: 9.5</span>
+  <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+</div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/The-Ritual/0PWRQNRWI2AD1BAEU9HB9OO1NN" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com/br/movie/o-ritual/umc.cmc.3egcwbkigp1kumjtpvg8h3ucf?playableId=tvs.sbd.9001%3A1839353034" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com/watch?v=vUNce264uZI" target="_blank" rel="noopener">Trailer</a>
+  </div>
 </article>
 
 <article class="card">
-  <div class="poster">
-
+  <h3>Frankenstein de Mary Shelley (1994)</h3>
+  <img src="img/marys_frankenstein.jpg" alt="Mary Shelley's Frankenstein (1994)">
+  <p>Adaptação sombria sobre criação, culpa e os limites da ciência — drama e horror em um só.</p>
+  <span>⭐ Nota média: 9.5</span>
+  <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+</div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/Frankenstein-De-Mary-Shelley/0N93ICXRK7X6G4UG2R2OB291FP" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com/gd/movie/mary-shelleys-frankenstein/umc.cmc.4ccajyv8yk49sz8vjml81yxcw" target="_blank" rel="noopener">Apple TV</a>
   </div>
-    <center><h3>Beetlejuice (1988)</h3></center>
-    <center><img src="img\Beetlejuice_film_poster.jpg"width="200" height="300"></center>
-    <center><p>Mistura de comédia, sobrenatural e estética sombria de Tim Burton: o “fantasma contratado” Beetlejuice causa caos entre os vivos e os mortos, com muito humor excêntrico e cenários caricatos.</p> <br></center>
-    <center><a href="https://www.primevideo.com/-/pt/detail/0OJOCIXPBXUOJZQ1N1P77561DB/ref=atv_dp_share_cu_r" download>Assista aqui</a></center> <br>
 </article>
 
 <article class="card">
-  <div class="poster">
-
+  <h3>Livrai-nos do Mal (2014)</h3>
+  <img src="img/deliver_us_from_evil.jpg" alt="Deliver Us From Evil (2014)">
+  <p>Policial e padre enfrentam força maligna em uma trama de exorcismo e investigação sobrenatural.</p>
+  <span>⭐ Nota média: 9.5</span>
+  <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+</div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/Deliver-Us-From-Evil/0N0CRCAS0M2KL6CWX7Q7KB96Q3" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com/us/movie/deliver-us-from-evil/umc.cmc.6x221wndpd1z40dirtrdblm8o" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.netflix.com/br/title/70299902" target="_blank" rel="noopener">Netflix</a>
+    <a class="btn btn--watch" href="https://www.youtube.com/watch?v=g3LhRvCY2c8" target="_blank" rel="noopener">Trailer</a>
   </div>
-    <center><h3>A Noiva-Cadáver (2005)</h3></center>
-    <center><img src="img\20140728.jpg" width="200" height="300"></center>
-    <center><p>Filme de animação de Tim Burton + direção de arte gótica: após um equívoco durante um ensaio de casamento, o protagonista é inadvertidamente “casado” com uma noiva morta e entra em um mundo fantasmal.</p></center>
-    <center><a href="https://www.primevideo.com/-/pt/detail/0IQWGOK9U7F8A4LVPVGSO2L1BB/ref=atv_dp_share_cu_r" download>Assista aqui</a></center> <br>
 </article>
-
-  <div class="card">
-  
-    <center><h3>A Lenda do Cavaleiro Sem Cabeça (1999)</h3></center>
-    <center><img src="img\A lenda do cavaleiro.webp" width="200" height="300"></center>
-    <center><p>Dirigido por Tim Burton, o investigador Ichabod Crane chega a uma vila amaldiçoada para desvendar assassinatos ligados a um cavaleiro decapitado.</p></center> 
-    <center><a href="https://www.primevideo.com/detail/0PDN6K0K6LD56P7K2ZB4Z9QOXT" download>Assista aqui</a></center> <br>
-</div>
-
-  <div class="card">
- 
-    <center><h3>A Colina Escarlate (2015)</h3></center>
-    <center><img src="img\A colina escarlate.jpg" width="200" height="300"></center>
-    <center><p>Guillermo del Toro entrega um romance gótico sombrio, onde amor, fantasmas e mistério se misturam dentro de uma mansão de segredos mortais.</p></center>
-    <center><a href="https://www.netflix.com/br/title/80037644" download>Assista aqui</a></center><br>
-</div>
-
-  <div class="card">
- 
-    <center><h3>Edward Mãos de Tesoura (1990)</h3></center>
-    <center><img src="img\edward maos de tesoura 1990.jpg" width="200" height="300"></center>
-    <center><p>Uma fábula gótica de Tim Burton sobre um homem criado com lâminas no lugar das mãos que tenta encontrar aceitação em uma cidade suburbana.</p></center>
-    <center><a href="https://www.disneyplus.com/pt-br/movies/edward-maos-de-tesoura/3vI2CkM9K8vR" download>Assista aqui</a></center><br>
-</div>
-
-  <div class="card">
-  
-    <center><h3>Sweeney Todd: O Barbeiro Demoníaco da Rua Fleet (2007)</h3></center>
-    <center><img src="img\sweeney todd.webp" width="200" height="300"></center>
-    <center><p>Um barbeiro injustiçado retorna a Londres em busca de vingança, numa história repleta de música, sangue e estética vitoriana sombria.</p></center> <br>
-    <center><a href="https://www.hbomax.com/br/pt/movies/urn:hbo:feature:GXrDBcgNVZ8LCwwEAAAB4" download>Assista aqui</a></center>
-</div>
-
-
-  <div class="card">
-  
-    <center><h3>Amantes Eternos (2013)</h3></center>
-    <center><img src="img\amantes eternos.webp" width="200" height="300"></center>
-    <center><p>Do diretor Jim Jarmusch, dois vampiros intelectuais e melancólicos vagam pela noite entre música, arte e nostalgia da humanidade.</p></center>
-    <center><a href="https://www.primevideo.com/detail/0I9LNEOZVYDU8WCS4BZ1R7SWR9" download>Assista aqui</a></center>
-</div>
-
-  <div class="card">
-  
-    <center><h3>Os Outros (2001)</h3></center>
-    <center><img src="img\Outros_2001.jpg" width="200" height="300"></center>
-    <center><p>Um suspense gótico estrelado por Nicole Kidman. Em uma mansão isolada e coberta por neblina, uma mãe e seus filhos enfrentam acontecimentos misteriosos enquanto segredos sombrios vêm à tona.</p></center>
-    <center><a href=""https="https://www.primevideo.com/detail/0I9LNEOZVYDU8WCS4BZ1R7SWR9" download>Assista aqui</a></center><br>
-</div>
-
-  <div class="card">
- 
-    <center><h3>Sombras da Noite (2012)</h3></center>
-    <center><img src="img\sombras da noite.webp" width="200" height="300"></center>
-    <center><p>Outro clássico de Tim Burton: o vampiro Barnabas Collins desperta em 1972 e tenta restaurar sua mansão decadente enquanto enfrenta o amor perdido.</p></center>
-    <center><a href="https://www.max.com/br/pt/movies/dark-shadows" download>Assista aqui</a></center>
-</div> 
 
 <article class="card">
-  <div class="poster">
-
+  <h3>Texas Chainsaw 3D (2013)</h3>
+  <img src="img/texas_chainsaw_3d.jpg" alt="Texas Chainsaw 3D">
+  <p>Heather retorna à propriedade ancestral e confronta Leatherface — slasher e violência visceral.</p>
+  <span>⭐ Nota média: 9.5</span>
+  <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+</div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/Texas-Chainsaw-3D/0N7RDNKFG5V9HLKYEDRQ0YDFU6" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com/us/movie/texas-chainsaw/umc.cmc.abycxav19hr4u8vfzivvtnsl" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com/watch?v=gB0aHrd7rUo" target="_blank" rel="noopener">Trailer</a>
   </div>
-    <center><h3>A Família Addams (1991)</h3></center>
-    <center><img src="img\A_Família_Addams_Pôster.jpg"width="200" height="300"></center>
-    <center><p>Comédia macabra que retrata a excêntrica e sombria família Addams em sua rotina peculiar — humor negro e estética gótica se misturam para destacar o diferente como algo normal.</p></center>
-    <center><a href="https://www.primevideo.com/-/pt/detail/0IZIQS0KE0Y3J77YO2URW2OTSA/ref=atv_dp_share_cu_r" download>Assista aqui</a></center> <br>
 </article>
 
-</section>
+
+    <article class="card">
+      
+      <h3>O Exorcista (1973)</h3>
+      <img src="img/midsommar.jpg" alt="--">
+      <p>Um dos maiores clássicos do terror, envolvendo possessão demoníaca e fé.</p>
+      <span>⭐ Nota média: 9.5</span>
+      <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+</div>
+
+    </article>
+
+    <article class="card">
+      
+      <h3>Hereditário (2018)</h3>
+      <img src="img/midsommar.jpg" alt="--">
+      <p>Terror psicológico intenso que explora luto, culpa e forças sobrenaturais.</p>
+      <span>⭐ Nota média: 8.9</span>
+      <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+</div>
+
+    </article>
+
+    <article class="card">
+      
+      <h3>A Bruxa (2015)</h3>
+      <img src="img/midsommar.jpg" alt="--">
+      <p>Atmosfera sombria e lenta sobre paranoia religiosa e o mal oculto.</p>
+      <span>⭐ Nota média: 8.3</span>
+      <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+</div>
+
+    </article>
+    <article class="card">
+  <h3>O Iluminado (1980)</h3>
+  <img src="img/midsommar.jpg" alt="--">
+  <p>Um escritor se isola em um hotel amaldiçoado, onde forças sobrenaturais despertam sua loucura.</p>
+  <span>⭐ Nota média: 9.2</span>
+  <div class="stars">
+    <input type="radio" name="rate5" id="i5"><label for="i5">★</label>
+    <input type="radio" name="rate5" id="i4"><label for="i4">★</label>
+    <input type="radio" name="rate5" id="i3"><label for="i3">★</label>
+    <input type="radio" name="rate5" id="i2"><label for="i2">★</label>
+    <input type="radio" name="rate5" id="i1"><label for="i1">★</label>
+    <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+  </div>
+</article>
+
+<article class="card">
+  <h3>It: A Coisa (2017)</h3>
+  <img src="img/midsommar.jpg" alt="--">
+  <p>Um grupo de crianças enfrenta uma entidade demoníaca que se alimenta do medo.</p>
+  <span>⭐ Nota média: 8.6</span>
+  <div class="stars">
+    <input type="radio" name="rate6" id="it5"><label for="it5">★</label>
+    <input type="radio" name="rate6" id="it4"><label for="it4">★</label>
+    <input type="radio" name="rate6" id="it3"><label for="it3">★</label>
+    <input type="radio" name="rate6" id="it2"><label for="it2">★</label>
+    <input type="radio" name="rate6" id="it1"><label for="it1">★</label>
+    <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+  </div>
+</article>
+
+<article class="card">
+  <h3>Invocação do Mal (2013)</h3>
+  <img src="img/midsommar.jpg" alt="--">
+  <p>Investigadores paranormais ajudam uma família aterrorizada por uma presença demoníaca.</p>
+  <span>⭐ Nota média: 8.8</span>
+  <div class="stars">
+    <input type="radio" name="rate7" id="c5"><label for="c5">★</label>
+    <input type="radio" name="rate7" id="c4"><label for="c4">★</label>
+    <input type="radio" name="rate7" id="c3"><label for="c3">★</label>
+    <input type="radio" name="rate7" id="c2"><label for="c2">★</label>
+    <input type="radio" name="rate7" id="c1"><label for="c1">★</label>
+    <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+  </div>
+</article>
+
+<article class="card">
+  <h3>Midsommar (2019)</h3>
+  <img src="img/midsommar.jpg" alt="--">
+  <p>Um terror perturbador ambientado à luz do dia, onde um festival pagão esconde rituais macabros e violência psicológica.</p>
+  <span>⭐ Nota média: 8.1</span>
+  <div class="stars">
+    <input type="radio" name="rate8" id="m5"><label for="m5">★</label>
+    <input type="radio" name="rate8" id="m4"><label for="m4">★</label>
+    <input type="radio" name="rate8" id="m3"><label for="m3">★</label>
+    <input type="radio" name="rate8" id="m2"><label for="m2">★</label>
+    <input type="radio" name="rate8" id="m1"><label for="m1">★</label>
+    <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+  </div>
+</article>
+
+
+    <article class="card">
+      <h3>Halloween (1978)</h3>
+      <img src="img/midsommar.jpg" alt="--">
+      <p>O nascimento do slasher moderno com Michael Myers.</p>
+      <span>⭐ Nota média: 8.7</span>
+      <div class="stars">
+  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
+  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
+  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
+  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
+  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank" rel="noopener">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
+  </div>
+</div>
+
+    </article>
+
+  </section>
 
 </main>
 
-
-<footer class="site-footer">
-  <p><center>© [2025] - GOTH THRILLER. Todos os Direitos Reservados na Penumbra Eterna.</center></p>
+<footer>
+  <p>© 2026 — Cinneview • Avaliações na escuridão</p>
 </footer>
-
-<script src="script.js"></script>
-
-<!-- pro botão de login e cadastro -->
-<div id="authModal" hidden>
-  <div class="auth">
-    <button id="closeAuth" aria-label="fechar">✕</button>
-    <form id="login">
-      <h3>Login</h3>
-      <input name="u" placeholder="usuário" required>
-      <input name="p" type="password" placeholder="senha" required>
-      <button>Entrar</button>
-      <p><a id="toReg" role="button">Criar conta</a></p>
-    </form>
-
-    <form id="reg" hidden>
-      <h3>Cadastro</h3>
-      <input name="u" placeholder="usuário" required>
-      <input name="p" type="password" placeholder="senha" required>
-      <button>Cadastrar</button>
-      <p><a id="toLog" role="button">Já tenho conta</a></p>
-    </form>
-  </div>
-</div>
 
 </body>
 </html>

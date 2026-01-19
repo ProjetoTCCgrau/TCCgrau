@@ -1,69 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contato — Goth Thriller</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contato — Cinneview</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   <center><h1 class="logo">Goth Thriller</h1></center>
-   
-    <header class="site-header">
+<header>
 
-    <nav class="main-nav">
-        <a href="index.html">Início</a>
-        <a href="favoritos.html">Favoritos</a>
-        <a href="index1.html">Séries em Destaque</a>
-        <a href="tabela.html">Tabela</a>
-        <a href="contato.html" class="active">Contato</a>
-        <button id="btnTema" type="button" aria-pressed="false" title="Alternar tema">Tema</button>
+  <h1> Cinneview</h1>
+
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="avaliacoes.html">Avaliações</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="contato.html">Contato</a>
+    <button id="btnTema" type="button" title="Alternar tema">Tema</button>
   </nav>
-    </header>
-</div>
+</header>
 
-<div class="container">
-    <h2>🖤 Deixe sua Avaliação</h2>
+<main class="container">
+  <section class="card">
+    <h2> Contato </h2>
+    <p>Deixe sua avaliação! Os campos com * são obrigatórios.</p>
 
-    <form class="formulario">
-        
-    <div class="campo">
-        <label for="nome">Nome*</label>
-        <input type="text" id="name" name="nome" required placeholder="Digite seu nome">
-    </div>
+    <form class="formulario" id="contactForm">
+      <div class="campo">
+        <label for="nome">Nome *</label> <br>
+        <input id="nome" name="nome" type="text" required placeholder="Seu nome">
+      </div>
 
-    <div class="campo">
-        <label for="preferido">Série ou Filme Preferido</label>
-        <input type="text" id="preferido" name="preferido" placeholder="Ex: Drácula">
-    </div>
+      <div class="campo">
+        <label for="preferido">Série ou Filme Preferido</label> <br>
+        <input id="preferido" name="preferido" type="text" placeholder="Título">
+      </div>
 
-    <div class="campo">
-        <label for="nota">Nota (0 a 10)</label>
-        <input type="number" id="nota" name="nota" min="0" max="10">
-    </div>
 
-    <div class="campo">
-        <label for="data">Data e Hora que assistiu</label>
-        <input type="datetime-local" id="data" name="data">
-    </div>
+      <div class="campo">
+        <label for="data">Data e hora que assistiu</label> <br>
+        <input id="data" name="data" type="datetime-local">
+      </div>
 
-    <div class="campo">
-        <label for="avaliacao">Avaliação (0 a 10)</label>
-        <input type="range" id="avaliacao" name="avaliacao" min="0" max="10">
-    </div>
+      <div class="campo">
+        <label for="coment">Comentário</label> <br>
+        <textarea id="coment" name="coment" rows="4" placeholder="Deixe um comentário (opcional)"></textarea>
+      </div>
 
-        <button type="submit">Enviar Avaliação</button>
+      <div style="display:flex;justify-content:flex-end;gap:8px">
+        <button type="submit" class="btn">Enviar</button>
+        <button type="reset" class="btn">Limpar</button>
+      </div>
     </form>
-</div>
 
-<footer class="site-footer">
-    <p>© [2025] - GOTH THRILLER - Obrigado por compartilhar sua escuridão ✨</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 — Cinneview • Avaliações na escuridão</p>
 </footer>
-<script src="script.js"></script>
+
 
 </body>
 </html>

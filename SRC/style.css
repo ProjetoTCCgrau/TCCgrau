@@ -1,249 +1,188 @@
-.main-nav {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: center; 
-  flex-wrap: wrap;
-}/*===para centralizar os links===*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond&display=swap');
 
-/* estiliza todos os links que tenham o atributo download */
-a[download] { /* ou use a[href*="primevideo"] para domínios específicos */
-  /* mesmo estilo que .btn-watch */
-  display:inline-block; padding:10px 14px; background:linear-gradient(90deg,#8f1f66,#c84a88);
-  color:#fff; border-radius:10px; text-decoration:none; font-weight:600;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Cormorant Garamond',serif;
+  background:linear-gradient(180deg,#0b0b0d,#161218);
+  color:#e5e5e5;
+  min-height:100vh;
 }
 
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-    background: #161413;
-    color: #d3d3d3;
-    display: list-item;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+header{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,.4);
+  border-bottom:1px solid rgba(255,255,255,.05);
 }
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;600&display=swap');
-
-/* Exibe os cards em 2 colunas e cai para 1 coluna em telas pequenas */
-.grid-posters{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* duas colunas iguais */
-  gap: 20px;
-  align-items: start;     /* alinha o conteúdo do card ao topo */
-  width: 100%;
+header h1{
+  font-family:'Cinzel',serif;
+  letter-spacing:1px;
 }
-/*=== colunas e cards dos filmes ===*/
-@media (max-width: 720px){
-  .grid-posters{
-    grid-template-columns: 1fr;
-  }
+nav{margin-top:10px}
+nav a{
+  color:#ccc;
+  margin:0 8px;
+  text-decoration:none;
 }
-.card { display:flex; flex-direction:column; height:100%; }
+nav a:hover{color:#e63946}
 
-
-body {
-    font-family: 'Cormorant Garamond', serif;
+.container{
+  max-width:900px;
+  margin:30px auto;
+  padding:0 15px;
 }
 
-.card, .fav-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(180, 0, 40, 0.3);
-    box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    transition: transform 0.3s, box-shadow 0.3s;
+/* pesquisa */
+.search{
+  display:flex;
+  gap:6px;
+  margin-bottom:25px;
 }
-.card:hover, .fav-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(120,0,120,0.7);
+.search input{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  background:#1f1f1f;
+  color:#fff;
 }
-.main-nav a {
-    color: #cfc9c7;
-    transition: 0.3s;
+.search button{
+  padding:10px 14px;
+  border:none;
+  border-radius:6px;
+  background:#7b1e7a;
+  color:#fff;
+  cursor:pointer;
 }
-.main-nav a:hover {
-    color: #e63946;
-    text-shadow: 0 0 6px #e63946;
+.search button:hover{background:#a83279}
+
+/* grid de filmes */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+@media(max-width:650px){
+  .grid{grid-template-columns:1fr}
 }
 
-/*=== centraliza o menu ===*/
-.main-nav{ display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; margin:0 auto; }
-/*=== neutraliza <center> ===*/
-.main-nav center{ display:contents; }
-
-.site-footer {
-    margin-top: 40px;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #888;
-    border-top: 1px solid rgba(255,255,255,0.1);
+/* cards */
+.card{
+  background:rgba(255,255,255,.03);
+  padding:16px;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,.6);
 }
-.site-footer p {
-  font-style: italic;
+.card h3{
+  font-family:'Cinzel',serif;
+  margin-bottom:6px;
 }
-img {
-  border-radius: 8px;
-  transition: transform 0.3s;
+.card p{font-size:.95rem;margin-bottom:8px}
+.card span{font-size:.9rem;color:#ccc}
+.card button{
+  margin-top:10px;
+  padding:8px;
+  width:100%;
+  border:none;
+  border-radius:6px;
+  background:#550055;
+  color:#fff;
+  cursor:pointer;
 }
-img:hover {
-  transform: scale(1.05);
-}
+.card button:hover{background:#770077}
 
-
-.site-header{
-  display:flex; align-items:center; justify-content:space-between;
-  padding: 18px 28px; border-bottom: 1px solid rgba(255,255,255,0.04);
-  background: rgba(0,0,0,0.25);
-}
-.logo{ font-size: 1.6rem; font-weight:700; letter-spacing: 0.6px; }
-
-
-.main-nav a{ color: #cfc9c7; text-decoration:none; margin-left:16px; padding:8px 12px; border-radius:8px; }
-.main-nav a.active, .main-nav a:hover{ background: rgba(255,255,255,0.03); color: #fff; }
-.container{ max-width: 1000px; margin: 36px auto; padding: 0 20px; }
-.intro h2{ font-size: 1.3rem; margin-bottom:8px; }
-.intro p{ color: #d3d3d3; margin-bottom:20px; }
-
-
-      /*===pagina favoritos===*/
-    .favorites{ padding-top:6px; }
-    .fav-list{ list-style: none; display:flex; flex-direction:column; gap:18px; margin-top:12px; }
-    .fav-item{ display:flex; gap:14px; align-items:flex-start; background: rgba(255,255,255,0.02); padding:12px; border-radius:10px; }
-    .fav-poster{ width:120px; height:160px; flex-shrink:0; border-radius:8px; display:flex; align-items:flex-end; justify-content:center; }
-    .fav-info h3{ margin-bottom:8px; }
-    .back-link{ margin-top:16px; }
-
-
-  @media (max-width:600px){
-.poster{ height:220px; }
-.fav-item{ flex-direction:column; align-items:center; text-align:center; }
-.fav-poster{ width:60%; height:180px; }
-}
-    /*===tabela de séries favs===*/
-  .tabela {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: rgba(255,255,255,0.02);
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    border-radius: 10px;
-    overflow: hidden;
-}
-  .tabela th, .tabela td {
-    padding: 12px 16px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-  .tabela th {
-    background-color: rgba(120,0,120,0.3);
-    font-family: 'Cinzel', serif;
-    color: #fff;
-}
-  .tabela tr:hover {
-  background-color: rgba(255,255,255,0.05);
-  transition: 0.3s;
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
 }
 
-    /*===formulario===*/
-.formulario {
-  max-width: 500px;
-  margin: 20px auto;
-  background-color: rgba(255,255,255,0.02);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+/* avaliação por estrelas */
+.stars{
+  direction:rtl;
+  display:flex;
+  justify-content:flex-end;
+  gap:4px;
 }
-.campo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+.stars input{display:none}
+.stars label{
+  font-size:20px;
+  color:#555;
+  cursor:pointer;
+  transition:.2s;
 }
-label {
-  margin-bottom: 5px;
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label{
+  color:#e63946;
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+  font-size:.85rem;
+  color:#aaa;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+/* BOTÃO DE TEMA – FIXO NO CANTO */
+#btnTema{
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+
+  background: linear-gradient(135deg,#5a0f1f,#8b0000);
+  color: #fff;
   font-weight: bold;
-  color: #cfc9c7;
-}
-input, textarea, button {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-input, textarea {
-  background-color: rgba(150, 0, 0, 0.08);
-  color: #fff;
-}
-input:focus {
-  box-shadow: 0 0 8px #e63946;
-}
-button {
-  background-color: #7b1e7a;
-  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+
   cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  background-color: #a83279;
-  box-shadow: 0 0 10px #a83279;
-}
-.header, .site-header { position: relative; }
-
-/*===posiciona no canto superior direito o tema===*/
-    #btnTema {
-  position: absolute;
-  top: 12px;
-  right: 18px;
-  z-index: 50;
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(90deg,#833d82,#a83279);
-  color: #fff;
+  box-shadow: 0 0 12px rgba(139,0,0,0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/*=== botão de voltar ===*/
-  .back-link { text-align: center; margin-top: 14px; }
-
-/*=== estiliza o botão ===*/
-  .back-link a,
-  .back-link a.btn--fav {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(90deg,#833d82,#a83279);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.5);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-  font-family: 'Cinzel', serif;
+#btnTema:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(180,0,0,0.9);
+}
+.login-icon{
+  position:fixed; top:16px; left:16px;
+  background:#7b0000; border:none;
+  border-radius:50%; padding:10px;
+  cursor:pointer; font-size:18px;
+  box-shadow:0 0 10px rgba(180,0,0,.7);
 }
 
-  .back-link a:hover,
-  .back-link a:focus {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-  filter: brightness(1.06);
+#authModal{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.7);
+  display:grid; place-items:center;
+  z-index:2000;
 }
+#authModal[hidden]{display:none}
 
-/*=== block em telas pequenas e centraliza ===*/
-@media (max-width:480px){
-  .back-link a { display: block; margin: 10px auto; width: fit-content; }
+.auth-box{
+  background:#111; padding:20px;
+  border-radius:10px; width:260px;
+  box-shadow:0 0 25px rgba(0,0,0,.8);
 }
-
-/*=== se tiver link apenas texto ou com <center>, força estilo ===*/
-  .back-link center a { display:inline-block; } 
-
-/* auth modal mínimo */
-/* garante que o atributo hidden oculte o modal mesmo se houver outra regra */
-    #authModal[hidden]{display:none!important}
-
-    #authModal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.6);z-index:9999}
-    #authModal .auth{background:#111;padding:18px;border-radius:10px;min-width:260px;color:#ddd;box-shadow:0 10px 30px rgba(0,0,0,0.8)}
-    #authModal input{width:100%;padding:8px;margin:8px 0;border-radius:6px;border:none;background:#222;color:#fff}
-    #authModal button{padding:8px 10px;border-radius:6px;border:none;background:linear-gradient(90deg,#7b1e7a,#a83279);color:#fff;cursor:pointer}
-    #closeAuth{position:absolute;right:14px;top:12px;background:transparent;border:none;color:#fff;font-size:18px;cursor:pointer}
-    #authModal a{color:#9fb3ff;cursor:pointer;text-decoration:underline}
-
-    #authCreateBtn{margin-left:8px;padding:10px 10px;border-radius:6px;border:none;background:linear-gradient(90deg,#7b1e7a,#a83279);color:#fff;cursor:pointer}
+.auth-box input{
+  width:100%; margin:6px 0;
+  padding:8px; border:none;
+  border-radius:6px; background:#222; color:#fff;
+}
+.auth-box button{
+  width:100%; margin-top:8px;
+  background:#8b0000; color:#fff;
+  border:none; padding:8px; border-radius:6px;
+}
+.auth-box a{cursor:pointer;color:#e63946}
+#closeAuth{background:none;color:#fff;font-size:18px}
