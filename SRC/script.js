@@ -1,12 +1,35 @@
-/* mostrarDataAtual: escreve data/hora atual no rodapé ao carregar */
-function mostrarDataAtual(){
-  const footer = document.querySelector('.site-footer');
-  if(!footer) return;
-  const now = new Date();
-  const texto = ` ${now.toLocaleString()}`;
-  footer.dataset.updated = texto;
-  footer.innerHTML = footer.innerHTML + `<span style="display:block;margin-top:6px;color:#a8a0a0;font-size:0.9rem">${texto}</span>`;
-}
+// Lógica para exibir a hora
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('horaAtual');
+  if (!el) return;
+
+  const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
+  let agora;
+
+  fetch(url)
+    .then(r => r.json())
+    .then(d => {
+      agora = new Date(d.datetime);
+      atualizar();
+      setInterval(() => {
+        agora.setSeconds(agora.getSeconds() + 1);
+        atualizar();
+      }, 1000);
+    })
+    .catch(() => el.textContent = "Erro ao carregar a hora.");
+
+  function atualizar() {
+    el.textContent =
+      agora.toLocaleDateString("pt-BR", {
+        year: "numeric", month: "long", day: "numeric"
+      }) +
+      " " +
+      agora.toLocaleTimeString("pt-BR", {
+        hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false
+      }) +
+      " (Horário de Brasília)";
+  }
+});
 
 /* alterarCorDeFundo: alterna tema (escuro / mais roxo) — chamada por botão */
 function alterarCorDeFundo(){
@@ -83,31 +106,89 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(btnCalc) btnCalc.addEventListener('click', calcularMedia);
 });
 
-// registro/login 
-document.addEventListener('click',e=>{
-  const auth=document.getElementById('authModal');
-  if(!auth) return;
-  if(e.target.id==='authBtn') auth.hidden=false;
-  if(e.target.id==='closeAuth') auth.hidden=true;
-  if(e.target.id==='toReg'){ document.getElementById('login').hidden=true; document.getElementById('reg').hidden=false; }
-  if(e.target.id==='toLog'){ document.getElementById('reg').hidden=true; document.getElementById('login').hidden=false; }
-});
-document.getElementById('reg')?.addEventListener('submit',e=>{
-  e.preventDefault();
-  const u=e.target.u.value.trim(), p=e.target.p.value;
-  if(!u||!p) return alert('preencha');
-  try{ localStorage.setItem('goth_user_'+u,p); }catch(err){}
-  mostrarMensagem?.('Conta criada');
-  e.target.reset();
-  document.getElementById('login').hidden=false; document.getElementById('reg').hidden=true;
-});
-document.getElementById('login')?.addEventListener('submit',e=>{
-  e.preventDefault();
-  const u=e.target.u.value.trim(), p=e.target.p.value;
-  const pass=localStorage.getItem('goth_user_'+u);
-  if(pass===p){ mostrarMensagem?.('Bem-vindo, '+u); document.getElementById('authModal').hidden=true; }
-  else alert('usuário/senha inválidos');
-});
-document.addEventListener('click',e=>{ if(e.target.id==='authCreateBtn'){const m=document.getElementById('authModal'); if(!m) return; m.hidden=false; document.getElementById('login').hidden=true; document.getElementById('reg').hidden=false; }});
+//login/cadastro inicial
+function alternarTema() {
+  document.body.classList.toggle('tema-alternativo');
+}
 
+function abrirModal() {
+  document.getElementById('authModal').hidden = false;
+}
 
+function fecharModal() {
+  document.getElementById('authModal').hidden = true;
+}
+
+function mostrarCadastro() {
+  document.getElementById('loginForm').hidden = true;
+  document.getElementById('registerForm').hidden = false;
+}
+
+function mostrarLogin() {
+  document.getElementById('registerForm').hidden = true;
+  document.getElementById('loginForm').hidden = false;
+}
+
+//cadastro
+function cadastrarUsuario(evento) {
+  evento.preventDefault();
+
+  const usuario = document.getElementById('regUser').value.trim();
+  const senha = document.getElementById('regPass').value.trim();
+
+  if (!usuario || !senha) {
+    alert('Preencha todos os campos.');
+    return;
+  }
+
+  localStorage.setItem(`usuario_${usuario}`, senha);
+  alert('Conta criada com sucesso!');
+
+  evento.target.reset();
+  mostrarLogin();
+}
+
+//login
+function fazerLogin(evento) {
+  evento.preventDefault();
+
+  const usuario = document.getElementById('loginUser').value.trim();
+  const senha = document.getElementById('loginPass').value.trim();
+
+  const senhaSalva = localStorage.getItem(`usuario_${usuario}`);
+
+  if (senhaSalva === senha) {
+    alert(`Bem-vindo, ${usuario}!`);
+    fecharModal();
+  } else {
+    alert('Usuário ou senha inválidos.');
+  }
+}
+
+//inicialização
+document.addEventListener('DOMContentLoaded', () => {
+  // Tema
+  document.getElementById('btnTema')
+    ?.addEventListener('click', alternarTema);
+
+  // Modal
+  document.getElementById('loginBtn')
+    ?.addEventListener('click', abrirModal);
+
+  document.getElementById('closeAuth')
+    ?.addEventListener('click', fecharModal);
+
+  // Troca login / cadastro
+  document.getElementById('goRegister')
+    ?.addEventListener('click', mostrarCadastro);
+
+  document.getElementById('goLogin')
+    ?.addEventListener('click', mostrarLogin);
+
+  // Formulários
+  document.getElementById('registerForm')
+    ?.addEventListener('submit', cadastrarUsuario);
+
+  document.getElementById('loginForm')
+    ?.addEventListener('submit', fazerLogin);
+});
