@@ -1,2 +1,2 @@
 # Nome do projeto: Cineview
-Repositório do nosso TCC
+Esse é um projeto focado no desenvolvimento de um site onde os usuários podem dar notas para filmes e ver onde eles estão disponíveis para assistir.
