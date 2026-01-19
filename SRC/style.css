@@ -12,7 +12,7 @@ body{
 header{
   text-align:center;
   padding:20px;
-  background:rgba(0,0,0,.4);
+  background:rgba(126, 25, 25, 0.4);
   border-bottom:1px solid rgba(255,255,255,.05);
 }
 header h1{
@@ -37,12 +37,13 @@ nav a:hover{color:#e63946}
 .search{
   display:flex;
   gap:6px;
-  margin-bottom:25px;
+  margin-bottom:30px;
+  justify-content: center;
 }
 .search input{
-  flex:1;
-  padding:10px;
-  border:none;
+  width: 500px;       
+  padding: 6px;
+  border: none;
   border-radius:6px;
   background:#1f1f1f;
   color:#fff;
@@ -51,7 +52,7 @@ nav a:hover{color:#e63946}
   padding:10px 14px;
   border:none;
   border-radius:6px;
-  background:#7b1e7a;
+  background:#e63946;
   color:#fff;
   cursor:pointer;
 }
@@ -93,10 +94,13 @@ nav a:hover{color:#e63946}
 .card button:hover{background:#770077}
 
 .card img{
-  width:100%;
-  border-radius:10px;
-  margin-bottom:10px;
+  width:70%;
+  height:auto;
+  display:block;
+  margin:0 auto 6px;
+  border-radius:6px;
 }
+
 
 /* avaliação por estrelas */
 .stars{
@@ -159,7 +163,9 @@ footer{
   border-radius:50%; padding:10px;
   cursor:pointer; font-size:18px;
   box-shadow:0 0 10px rgba(180,0,0,.7);
+  
 }
+
 
 #authModal{
   position:fixed; inset:0;
@@ -186,3 +192,29 @@ footer{
 }
 .auth-box a{cursor:pointer;color:#e63946}
 #closeAuth{background:none;color:#fff;font-size:18px}
+
+/* === FILMES EM CARTAZ === */
+.cinema{
+  margin:30px 0;
+}
+.cinema h2{
+  font-family:'Cinzel',serif;
+  margin-bottom:16px;
+  text-align:center;
+}
+.cinema-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.cinema-card span{
+  display:block;
+  margin-top:8px;
+  color:#e63946;
+  font-size:.85rem;
+  font-weight:bold;
+}
+
+@media(max-width:700px){
+  .cinema-grid{grid-template-columns:1fr}
+}
