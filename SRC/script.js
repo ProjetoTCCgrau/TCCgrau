@@ -31,40 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* alterarCorDeFundo: alterna tema (escuro / mais roxo) — chamada por botão */
-function alterarCorDeFundo(){
-  const body = document.body;
-  if(body.classList.toggle('alt-theme')){
-    body.style.background = 'linear-gradient(180deg,#2b0b1f,#2b0b1f)';
-  } else {
-    body.style.background = 'linear-gradient(180deg,#0b0b0d,#161418)';
-  }
-}
-
-/* validarFormulario: checa campos obrigatórios e notas válidas; retorna boolean */
-function validarFormulario(form){
-  const nome = form.querySelector('[name="nome"]');
-  if(!nome || !nome.value.trim()){
-    alert('Por favor, preencha seu nome (obrigatório).');
-    nome.focus();
-    return false;
-  }
-  const nota = form.querySelector('[name="nota"]');
-  if(nota && (nota.value < 0 || nota.value > 10)){
-    alert('Nota deve estar entre 0 e 10.');
-    nota.focus();
-    return false;
-  }
-  return true;
-}
-
-/* mostrarMensagem: exibe mensagem de sucesso (após envio validado) */
+// mostrarMensagem: exibe mensagem de sucesso (após envio validado)
 function mostrarMensagem(msg){
   const box = document.createElement('div');
   box.textContent = msg;
   Object.assign(box.style,{position:'fixed',right:'18px',bottom:'18px',background:'#222',color:'#fff',padding:'10px 14px',borderRadius:'8px',boxShadow:'0 8px 20px rgba(0,0,0,0.6)'});
   document.body.appendChild(box);
-  setTimeout(()=>box.remove(),3500);
+  setTimeout(()=>box.remove(),1500);
 }
 
 /* calcularMedia: percorre tabela com classe .tabela e calcula média da coluna Nota */
@@ -94,109 +67,26 @@ function calcularMedia(){
     });
   }
 
-
-//login/cadastro inicial
-function alternarTema() {
-  document.body.classList.toggle('tema-alternativo');
-}
-
-function abrirModal() {
-  document.getElementById('authModal').hidden = false;
-}
-
-function fecharModal() {
-  document.getElementById('authModal').hidden = true;
-}
-
-function mostrarCadastro() {
-  document.getElementById('loginForm').hidden = true;
-  document.getElementById('registerForm').hidden = false;
-}
-
-function mostrarLogin() {
-  document.getElementById('registerForm').hidden = true;
-  document.getElementById('loginForm').hidden = false;
-}
-
-//cadastro
-function cadastrarUsuario(evento) {
-  evento.preventDefault();
-
-  const usuario = document.getElementById('regUser').value.trim();
-  const senha = document.getElementById('regPass').value.trim();
-
-  if (!usuario || !senha) {
-    alert('Preencha todos os campos.');
-    return;
-  }
-
-  localStorage.setItem(`usuario_${usuario}`, senha);
-  alert('Conta criada com sucesso!');
-
-  evento.target.reset();
-  mostrarLogin();
-}
-
-//login
-function fazerLogin(evento) {
-  evento.preventDefault();
-
-  const usuario = document.getElementById('loginUser').value.trim();
-  const senha = document.getElementById('loginPass').value.trim();
-
-  const senhaSalva = localStorage.getItem(`usuario_${usuario}`);
-
-  if (senhaSalva === senha) {
-    alert(`Bem-vindo, ${usuario}!`);
-    fecharModal();
-  } else {
-    alert('Usuário ou senha inválidos.');
-  }
-}
-
-//inicialização
-document.addEventListener('DOMContentLoaded', () => {
-  // Tema
- 
-
-  // Modal
-  document.getElementById('loginBtn')
-    ?.addEventListener('click', abrirModal);
-
-  document.getElementById('closeAuth')
-    ?.addEventListener('click', fecharModal);
-
-  // Troca login / cadastro
-  document.getElementById('goRegister')
-    ?.addEventListener('click', mostrarCadastro);
-
-  document.getElementById('goLogin')
-    ?.addEventListener('click', mostrarLogin);
-
-  // Formulários
-  document.getElementById('registerForm')
-    ?.addEventListener('submit', cadastrarUsuario);
-
-  document.getElementById('loginForm')
-    ?.addEventListener('submit', fazerLogin);
-});
 // ==================== BUSCA ====================
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const btnBuscar = document.getElementById("btnBuscar");
+  const cards = document.querySelectorAll(".card");
 
   if (!searchInput || !btnBuscar) return;
 
-  btnBuscar.addEventListener("click", () => {
+  function filtrarFilmes() {
     const termo = searchInput.value.trim().toLowerCase();
+    let encontrou = false;
 
-    if (!termo) {
-      mostrarMensagem("Digite algo para buscar.");
+    // Se o campo estiver vazio, mostra todos os filmes
+    if (termo === "") {
+      cards.forEach(card => {
+        card.style.display = "block";
+        card.style.border = "none";
+      });
       return;
     }
-
-    const cards = document.querySelectorAll(".card");
-    let encontrou = false;
 
     cards.forEach(card => {
       const titulo = card.querySelector("h3")?.textContent.toLowerCase() || "";
@@ -213,8 +103,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!encontrou) {
       mostrarMensagem("Nenhum filme encontrado.");
     }
+  }
+
+  // Quando apagar o texto, volta tudo automaticamente
+  searchInput.addEventListener("input", () => {
+    if (searchInput.value.trim() === "") {
+      filtrarFilmes();
+    }
   });
 });
+
+// Busca em tempo real sem a necessidade de apertar o botão de buscar
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", () => {
+    const termo = searchInput.value.trim().toLowerCase();
+
+    cards.forEach(card => {
+      const titulo = card.querySelector("h3")?.textContent.toLowerCase() || "";
+
+      if (termo === "" || titulo.includes(termo)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
 //  tema
 document.addEventListener("DOMContentLoaded", () => {
   const btnTema = document.getElementById("btnTema");
