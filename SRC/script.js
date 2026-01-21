@@ -82,9 +82,6 @@ function calcularMedia(){
   return media;
 }
 
-/* Inicialização: liga eventos ao carregar a página */
-document.addEventListener('DOMContentLoaded',()=>{
-  mostrarDataAtual();
 
   // formulário: valida/mostra mensagem e previne envio real (ex.: sem backend)
   const form = document.querySelector('.formulario');
@@ -97,14 +94,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 
-  // botão alternar tema, se existir
-  const temaBtn = document.querySelector('#btnTema');
-  if(temaBtn) temaBtn.addEventListener('click', alterarCorDeFundo);
-
-  // botão calcular média (tabela)
-  const btnCalc = document.querySelector('#btnMedia');
-  if(btnCalc) btnCalc.addEventListener('click', calcularMedia);
-});
 
 //login/cadastro inicial
 function alternarTema() {
@@ -168,8 +157,7 @@ function fazerLogin(evento) {
 //inicialização
 document.addEventListener('DOMContentLoaded', () => {
   // Tema
-  document.getElementById('btnTema')
-    ?.addEventListener('click', alternarTema);
+ 
 
   // Modal
   document.getElementById('loginBtn')
@@ -191,4 +179,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('loginForm')
     ?.addEventListener('submit', fazerLogin);
+});
+// ==================== BUSCA ====================
+  document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const btnBuscar = document.getElementById("btnBuscar");
+
+  if (!searchInput || !btnBuscar) return;
+
+  btnBuscar.addEventListener("click", () => {
+    const termo = searchInput.value.trim().toLowerCase();
+
+    if (!termo) {
+      mostrarMensagem("Digite algo para buscar.");
+      return;
+    }
+
+    const cards = document.querySelectorAll(".card");
+    let encontrou = false;
+
+    cards.forEach(card => {
+      const titulo = card.querySelector("h3")?.textContent.toLowerCase() || "";
+
+      if (titulo.includes(termo)) {
+        card.style.display = "block";
+        card.style.border = "2px solid #9b4dff";
+        encontrou = true;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    if (!encontrou) {
+      mostrarMensagem("Nenhum filme encontrado.");
+    }
+  });
+});
+//  tema
+document.addEventListener("DOMContentLoaded", () => {
+  const btnTema = document.getElementById("btnTema");
+  if (!btnTema) return;
+
+  // Restaurar tema salvo
+  const temaSalvo = localStorage.getItem("tema");
+  if (temaSalvo === "claro") {
+    document.body.classList.add("light-mode");
+  }
+
+  btnTema.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    const temaAtual = document.body.classList.contains("light-mode")
+      ? "claro"
+      : "escuro";
+
+    localStorage.setItem("tema", temaAtual);
+    mostrarMensagem(`Tema ${temaAtual} ativado`);
+  });
 });
