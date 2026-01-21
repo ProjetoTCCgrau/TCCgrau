@@ -1,244 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{margin:0;padding:0;box-sizing:border-box}
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
 
-body{
-  font-family:'Cormorant Garamond',serif;
-  background:linear-gradient(180deg,#0b0b0d,#161218);
-  color:#e5e5e5;
-  min-height:100vh;
-}
+  * {
+    @apply border-graphite-800;
+  }
 
-header{
-  text-align:center;
-  padding:20px;
-  background:rgba(126, 25, 25, 0.4);
-  border-bottom:1px solid rgba(255,255,255,.05);
-}
-header h1{
-  font-family:'Cinzel',serif;
-  letter-spacing:1px;
-}
-nav{margin-top:10px}
-nav a{
-  color:#ccc;
-  margin:0 8px;
-  text-decoration:none;
-}
-nav a:hover{color:#e63946}
+  body {
+    @apply bg-graphite-950 text-white font-sans antialiased transition-colors duration-300;
+  }
 
-.container{
-  max-width:900px;
-  margin:30px auto;
-  padding:0 15px;
-}
+  body.light-mode {
+    @apply bg-graphite-50 text-graphite-900;
+  }
 
-/* pesquisa */
-.search{
-  display:flex;
-  gap:6px;
-  margin-bottom:30px;
-  justify-content: center;
-}
-.search input{
-  width: 500px;       
-  padding: 6px;
-  border: none;
-  border-radius:6px;
-  background:#1f1f1f;
-  color:#fff;
-}
-.search button{
-  padding:10px 14px;
-  border:none;
-  border-radius:6px;
-  background:#e63946;
-  color:#fff;
-  cursor:pointer;
-}
-.search button:hover{background:#a83279}
+  body.light-mode * {
+    @apply border-graphite-200;
+  }
 
-/* grid de filmes */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-@media(max-width:650px){
-  .grid{grid-template-columns:1fr}
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
 }
 
-/* cards */
-.card{
-  background:rgba(255,255,255,.03);
-  padding:16px;
-  border-radius:10px;
-  box-shadow:0 8px 20px rgba(0,0,0,.6);
-}
-.card h3{
-  font-family:'Cinzel',serif;
-  margin-bottom:6px;
-}
-.card p{font-size:.95rem;margin-bottom:8px}
-.card span{font-size:.9rem;color:#ccc}
-.card button{
-  margin-top:10px;
-  padding:8px;
-  width:100%;
-  border:none;
-  border-radius:6px;
-  background:#550055;
-  color:#fff;
-  cursor:pointer;
-}
-.card button:hover{background:#770077}
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blood hover:bg-blood-dark text-white font-semibold rounded-full transition-all duration-200 shadow-lg hover:shadow-blood/20 flex items-center justify-center gap-2;
+  }
 
-.card img{
-  width:70%;
-  height:auto;
-  display:block;
-  margin:0 auto 6px;
-  border-radius:6px;
-}
+  .btn-secondary {
+    @apply px-6 py-3 bg-graphite-800 hover:bg-graphite-700 text-white font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-2;
+  }
 
+  .light-mode .btn-secondary {
+    @apply bg-graphite-200 hover:bg-graphite-300 text-graphite-900;
+  }
 
-/* avaliação por estrelas */
-.stars{
-  direction:rtl;
-  display:flex;
-  justify-content:flex-end;
-  gap:4px;
-}
-.stars input{display:none}
-.stars label{
-  font-size:20px;
-  color:#555;
-  cursor:pointer;
-  transition:.2s;
-}
-.stars input:checked ~ label,
-.stars label:hover,
-.stars label:hover ~ label{
-  color:#e63946;
-}
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-blood text-blood hover:bg-blood hover:text-white font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-2;
+  }
 
-footer{
-  text-align:center;
-  padding:15px;
-  margin-top:40px;
-  font-size:.85rem;
-  color:#aaa;
-  border-top:1px solid rgba(255,255,255,.05);
+  .card-modern {
+    @apply bg-graphite-900 border border-graphite-800 rounded-3xl overflow-hidden transition-all duration-300 shadow-xl;
+  }
+
+  .light-mode .card-modern {
+    @apply bg-white border-graphite-200 shadow-md;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-graphite-900 border border-graphite-800 rounded-2xl text-white placeholder-graphite-500 focus:outline-none focus:border-blood focus:ring-2 focus:ring-blood focus:ring-opacity-20 transition-all duration-200;
+  }
+
+  .light-mode .input-field {
+    @apply bg-white border-graphite-200 text-graphite-900 placeholder-graphite-400;
+  }
+
+  .section-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-graphite-800 to-transparent;
+  }
+
+  .light-mode .section-divider {
+    @apply via-graphite-200;
+  }
+
+  .movie-poster-container {
+    @apply relative aspect-[2/3] bg-graphite-950 overflow-hidden flex items-center justify-center w-full;
+  }
+
+  .light-mode .movie-poster-container {
+    @apply bg-graphite-100;
+  }
+
+  .movie-poster-img {
+    @apply max-w-full max-h-full object-contain transition-transform duration-500;
+  }
 }
 
-/* BOTÃO DE TEMA – FIXO NO CANTO */
-#btnTema{
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 1000;
-
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: none;
-
-  background: linear-gradient(135deg,#5a0f1f,#8b0000);
-  color: #db2c2c;
-  font-weight: bold;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(139,0,0,0.6);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-#btnTema:hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(180,0,0,0.9);
-}
-.login-icon{
-  position:fixed; top:16px; left:16px;
-  background:#7b0000; border:none;
-  border-radius:50%; padding:10px;
-  cursor:pointer; font-size:18px;
-  box-shadow:0 0 10px rgba(180,0,0,.7);
-  
-}
-
-
-#authModal{
-  position:fixed; inset:0;
-  background:rgba(0,0,0,.7);
-  display:grid; place-items:center;
-  z-index:2000;
-}
-#authModal[hidden]{display:none}
-
-.auth-box{
-  background:#111; padding:20px;
-  border-radius:10px; width:260px;
-  box-shadow:0 0 25px rgba(0,0,0,.8);
-}
-.auth-box input{
-  width:100%; margin:6px 0;
-  padding:8px; border:none;
-  border-radius:6px; background:#222; color:#fff;
-}
-.auth-box button{
-  width:100%; margin-top:8px;
-  background:#8b0000; color:#fff;
-  border:none; padding:8px; border-radius:6px;
-}
-.auth-box a{cursor:pointer;color:#e63946}
-#closeAuth{background:none;color:#fff;font-size:18px}
-
-/* === FILMES EM CARTAZ === */
-.cinema{
-  margin:30px 0;
-}
-.cinema h2{
-  font-family:'Cinzel',serif;
-  margin-bottom:16px;
-  text-align:center;
-}
-.cinema-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.cinema-card span{
-  display:block;
-  margin-top:8px;
-  color:#e63946;
-  font-size:.85rem;
-  font-weight:bold;
-}
-
-@media(max-width:700px){
-  .cinema-grid{grid-template-columns:1fr}
-}
-
-body {
-  background: linear-gradient(180deg, #0b0b0d, #161418);
-  color: #ffffff;
-  transition: background 0.4s, color 0.4s;
-}
-
-/* Tema claro */
-body.light-mode {
-  background: linear-gradient(180deg, #7c7b7b, #7c7b7b);
-  color: #111;
-}
-
-body.light-mode .card {
-  background: #c4c3c3;
-  color: #111;
-}
-
-body.light-mode header{
-background: #747373;
-}
-body.light-mode footer {
-  background: #747373;
+#app {
+  @apply min-h-screen flex flex-col bg-inherit;
 }

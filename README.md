@@ -1,33 +1,67 @@
-# Nome do projeto: Cineview
-Esse é um projeto focado no desenvolvimento de um site onde os usuários podem dar notas para filmes e ver onde eles estão disponíveis para assistir.
+# Cinneview - Vue.js
 
-# Instrução para rodar o site:
-Baixe o código-fonte e faça o download do repositório (botão Code > Download ZIP)
-ou clone o repositório usando o "open with GitHub desktop"
+Aplicação de review de filmes construída com Vue.js 3, Vue Router e armazenamento local.
 
-# Para o arquivo zip:
+## Funcionalidades
 
-Extraia o arquivo ZIP (se tiver baixado)
+- Sistema de login e cadastro local
+- Página de filmes em cartaz
+- Avaliações de filmes com editor de imagem
+- Ranking de filmes
+- Sistema de comentários
+- Perfil do usuário
+- Tema claro/escuro
 
-Abra o Visual Studio Code
+## Estrutura do Projeto
 
-Clique em File > Open Folder e selecione a pasta do projeto.
+```
+src/
+  components/     - Componentes reutilizáveis
+  pages/          - Páginas da aplicação
+  stores/         - Gerenciamento de estado
+  assets/         - Imagens e recursos estáticos
+  main.js         - Ponto de entrada
+  router.js       - Configuração de rotas
+  style.css       - Estilos globais
+  App.vue         - Componente raiz
+```
 
-# Para o GitHub Desktop:
+## Instalação
 
-clique em "open with GitHub desktop"
-e deixe abrir o aplicativo
+```bash
+npm install
+```
 
-depois clique em "open in visual studio code" (Ja abrira o VS Code com o codigo inteiro)
+## Desenvolvimento
 
-# Como rodar o site:
+```bash
+npm run dev
+```
 
-Dentro do projeto, localize a pasta src
+## Build
 
-Abra a pasta src
+```bash
+npm run build
+```
 
-Abra o arquivo principal do site (index.html)
+## Preview
 
-Selecione Open with Live Server (caso tenha a extensão instalada)
-ou
-Abra usando F5 para abrir diretamente no navegado
+```bash
+npm run preview
+```
+
+## Autenticação
+
+A autenticação é feita localmente usando localStorage. Usuários podem:
+- Criar nova conta
+- Fazer login
+- Acessar perfil (apenas quando logado)
+- Fazer logout
+
+## Editor de Imagem
+
+Na aba de Avaliações, clique em uma imagem de filme para abrir o editor. Você pode:
+- Ajustar brilho, contraste e saturação
+- Aplicar escala de cinza
+- Rotacionar a imagem
+- Baixar a imagem editada
