@@ -3,45 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Perfil — Cinneview</title>
+  <title>Perfil — Cinneview</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-<header>
-  <h1>Cinneview</h1>
+  <!--parte do header junto com o perfil-->
+  <header>
+  <img src="img/logo1_cinneview.png" alt="Logo do site" class="logo">
+  <div id="perfilHeader" class="perfil-header">
+    <img id="perfilFotoHeader" src="" alt="Foto de perfil">
+    <span id="perfilNomeHeader"></span>
+  </div>
   <nav>
     <a href="index.html">Filmes</a>
     <a href="avaliacoes.html">Avaliações</a>
     <a href="ranking.html">Ranking</a>
     <a href="comentario.html">Comentário</a>
-    <button id="btnTema" type="button" title="Alternar tema">Tema</button>
   </nav>
 </header>
 
-<main class="container">
-  <section class="card">
-    <h2>Perfil do Usuário</h2>
-    <div style="text-align:center; margin: 20px 0;">
-       <div style="font-size: 50px;">👤</div>
-       <h3 id="nomeUsuarioDisplay">Carregando...</h3>
-       <p>Membro do Cinneview</p>
-    </div>
+  <main class="container">
 
-    <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
+  <a href="index.html" class="btn voltar-index">← Voltar para o início</a>
 
-    <h3>Minhas Ações</h3>
-    <div style="display:flex; gap:10px; margin-top:10px;">
-        <button onclick="window.location.href='avaliacoes.html'" class="btn">Ver minhas avaliações</button>
-        <button id="btnLogout" class="btn" style="background-color: #333;">Sair da conta</button>
-    </div>
+  <section class="perfil-box">
+    <img id="fotoPerfilPreview" src="img/user-default.png" alt="Foto do perfil">
+    <h2 id="nomeUsuarioPerfil"></h2>
+
+    <input type="file" id="fotoPerfilInput" accept="image/*">
+
+    <button id="btnLogout" class="btn">Sair da conta</button>
   </section>
+
 </main>
 
-<footer>
-  <p>© 2026 — Cinneview • Avaliações na escuridão <br> <span id="horaAtual"></span></p>
-</footer>
+  <footer>
+    <p>
+      © 2026 — Cinneview • Avaliações na escuridão
+      <br>
+      <span id="horaAtual"></span>
+    </p>
+  </footer>
 
 </body>
 </html>

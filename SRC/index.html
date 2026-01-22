@@ -1,100 +1,67 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>Cinneview</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinneview</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body>
-      <!---botão--->
-<button id="loginBtn" class="login-icon">👤</button>
-       <!---tema-->
-       <button id="btnTema">tema</button>
-
-      <!---modal login--->
-<div id="authModal" hidden>
-  <div class="auth-box">
-    <button id="closeAuth">✕</button>
-
-    
-    <form id="loginForm">
-      <h3>Login</h3>
-      <input id="loginUser" placeholder="Usuário" required>
-      <input id="loginPass" type="password" placeholder="Senha" required>
-
-      <button>Entrar</button>
-      <p><a id="goRegister">Criar conta</a></p>
-
-    </form>
-
-        <!---registro--->
-    <form id="registerForm" hidden>
-      <h3>Cadastro</h3>
-      <input id="regUser" placeholder="Usuário" required>
-      <input id="regPass" type="password" placeholder="Senha" required>
-      <button>Cadastrar</button>
-      <p><a id="goLogin">Já tenho conta</a></p>
-    </form>
+<!--parte do header junto com o perfil-->
+  <header>
+  <img src="img/logo1_cinneview.png" alt="Logo do site" class="logo">
+  <div id="perfilHeader" class="perfil-header">
+    <img id="perfilFotoHeader" src="" alt="Foto de perfil">
+    <span id="perfilNomeHeader"></span>
   </div>
-</div>
-
-<header>
-
-  <h1> Cinneview</h1>
   <nav>
     <a href="index.html">Filmes</a>
     <a href="avaliacoes.html">Avaliações</a>
     <a href="ranking.html">Ranking</a>
-    <a href="comentario.html">Comentario</a>
-
+    <a href="comentario.html">Comentário</a>
   </nav>
 </header>
 
-<main class="container">
+  <main class="container">
 
-     <div class="search">
-    <input type="text" id="searchInput" placeholder="Pesquisar filme">
-    <button id="btnBuscar">Buscar</button>
-  </div>
-
-  <section class="cinema">
-  <h2>Em Cartaz nos Cinemas do Brasil</h2>
-
-  <div class="cinema-grid">
-
-    <div class="card cinema-card">
-      <img src="img/ritual.jpg"
-  width="100" height="350">
-      <h3>O Ritual (2025)</h3>
-      <p>Terror sobrenatural inspirado em exorcismos reais.</p>
-      <span>📍 Somente nos cinemas</span>
+    <!--parte da busca do site-->
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Pesquisar filme">
     </div>
 
-    <div class="card cinema-card">
-      <img src="img/nosferatu.jpg"
-  width="100" height="350">
-      <h3>Nosferatu</h3>
-      <p>Releitura moderna do clássico vampírico.</p>
-      <span>📍 Somente nos cinemas</span>
-    </div>
+    <!--em cartaz-->
+    <section class="cinema">
+      <h2>Em Cartaz nos Cinemas do Brasil</h2>
 
-    <div class="card cinema-card">
-      <img src="img/imaculada.jpg"
-  width="100" height="350">
-      <h3>Imaculada</h3>
-      <p>Religião, isolamento e horror psicológico.</p>
-      <span>📍 Somente nos cinemas</span>
-    </div>
+      <div class="cinema-grid">
 
-  </div>
-</section>
+        <div class="card cinema-card">
+          <img src="img/ritual.jpg" height="350">
+          <h3>O Ritual (2025)</h3>
+          <p>Terror sobrenatural inspirado em exorcismos reais.</p>
+          <span>📍 Somente nos cinemas</span>
+        </div>
 
-  <section class="grid">
+        <div class="card cinema-card">
+          <img src="img/nosferatu.jpg" height="350">
+          <h3>Nosferatu</h3>
+          <p>Releitura moderna do clássico vampírico.</p>
+          <span>📍 Somente nos cinemas</span>
+        </div>
+
+        <div class="card cinema-card">
+          <img src="img/imaculada.jpg" height="350">
+          <h3>Imaculada</h3>
+          <p>Religião, isolamento e horror psicológico.</p>
+          <span>📍 Somente nos cinemas</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!--filmes-->
+    <section class="grid">
 
 <article class="card">
   <h3>O Escuro e o Perverso (2020)</h3>
@@ -116,8 +83,7 @@
   </div>
 </article>
 
-
-<article class="card">
+      <article class="card">
   <h3>O Ritual (The Ritual)</h3>
   <img src="img/ritual.jpg"
   width="200" height="450">
@@ -137,7 +103,7 @@
   </div>
 </article>
 
-<article class="card">
+      <article class="card">
   <h3>Frankenstein de Mary Shelley (1994)</h3>
   <img src="img/frankestein.jpg"
   width="200" height="450">
@@ -197,10 +163,8 @@
   </div>
 </article>
 
-
-    <article class="card">
-      
-      <h3>O Exorcista (1973)</h3> <!--arrumar links-->
+      <article class="card">
+      <h3>O Exorcista (1973)</h3>
       <img src="img/exorcista.webp"
   width="100" height="350">
       <p>Um dos maiores clássicos do terror, envolvendo possessão demoníaca e fé.</p>
@@ -218,11 +182,9 @@
     <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
   </div>
 </div>
+ </article>
 
-    </article>
-
-    <article class="card">
-      
+ <article class="card">  
       <h3>Hereditário (2018)</h3>
       <img src="img/hereditario.jpg"
   width="100" height="350">
@@ -241,11 +203,9 @@
     <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
   </div>
 </div>
+ </article>
 
-    </article>
-
-    <article class="card">
-      
+ <article class="card">   
       <h3>A Bruxa (2015)</h3>
       <img src="img/a bruxa.jpg"
   width="100" height="350">
@@ -264,9 +224,9 @@
     <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
   </div>
 </div>
+</article>
 
-    </article>
-    <article class="card">
+<article class="card">
   <h3>O Iluminado (1980)</h3>
   <img src="img/o iluminado.webp"
   width="100" height="350">
@@ -350,8 +310,7 @@
   </div>
 </article>
 
-
-    <article class="card">
+<article class="card">
       <h3>Halloween (1978)</h3>
       <img src="img/halloween.webp"
   width="100" height="350">
@@ -370,20 +329,75 @@
     <a class="btn btn--watch" href="https://www.youtube.com" target="_blank" rel="noopener">Trailer</a>
   </div>
 </div>
+ </article>
 
-    </article>
+ <article class="card">
+  <h3>A Entidade (2012)</h3>
+  <img src="img/a entidade.jpg" width="100" height="350">
+  <p>Uma força antiga se manifesta através de imagens perturbadoras e rituais macabros.</p>
+  <span>⭐ Nota média: 8.4</span>
+  <div class="stars">
+    <input type="radio" name="rate3" id="s3-5"><label for="s3-5">★</label>
+    <input type="radio" name="rate3" id="s3-4"><label for="s3-4">★</label>
+    <input type="radio" name="rate3" id="s3-3"><label for="s3-3">★</label>
+    <input type="radio" name="rate3" id="s3-2"><label for="s3-2">★</label>
+    <input type="radio" name="rate3" id="s3-1"><label for="s3-1">★</label>
+  </div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank">Trailer</a>
+  </div>
+</article>
 
-  </section>
+<article class="card">
+  <h3>O Babadook (2014)</h3>
+  <img src="img/babadook.jpg" width="100" height="350">
+  <p>Um livro infantil desperta uma entidade que representa o luto e o medo psicológico.</p>
+  <span>⭐ Nota média: 8.2</span>
+  <div class="stars">
+    <input type="radio" name="rate4" id="s4-5"><label for="s4-5">★</label>
+    <input type="radio" name="rate4" id="s4-4"><label for="s4-4">★</label>
+    <input type="radio" name="rate4" id="s4-3"><label for="s4-3">★</label>
+    <input type="radio" name="rate4" id="s4-2"><label for="s4-2">★</label>
+    <input type="radio" name="rate4" id="s4-1"><label for="s4-1">★</label>
+  </div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank">Trailer</a>
+  </div>
+</article>
 
-</main>
+<article class="card">
+  <h3>Martyrs (2008)</h3>
+  <img src="img/martyrs.jpg" width="100" height="350">
+  <p>Um terror extremo que explora sofrimento, transcendência e violência psicológica.</p>
+  <span>⭐ Nota média: 8.0</span>
+  <div class="stars">
+    <input type="radio" name="rate5" id="s5-5"><label for="s5-5">★</label>
+    <input type="radio" name="rate5" id="s5-4"><label for="s5-4">★</label>
+    <input type="radio" name="rate5" id="s5-3"><label for="s5-3">★</label>
+    <input type="radio" name="rate5" id="s5-2"><label for="s5-2">★</label>
+    <input type="radio" name="rate5" id="s5-1"><label for="s5-1">★</label>
+  </div>
+  <div style="display:flex;gap:8px;margin-top:8px">
+    <a class="btn btn--watch" href="https://www.primevideo.com" target="_blank">Prime Video</a>
+    <a class="btn btn--watch" href="https://tv.apple.com" target="_blank">Apple TV</a>
+    <a class="btn btn--watch" href="https://www.youtube.com" target="_blank">Trailer</a>
+  </div>
 
-<footer>
-  <p>
-    © 2026 — Cinneview • Avaliações na escuridão
-    <br>
-    <span id="horaAtual"></span>
-  </p>
-</footer>
+</section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 — Cinneview • Avaliações na escuridão
+      <br>
+      <span id="horaAtual"></span>
+    </p>
+  </footer>
 
 </body>
 </html>
