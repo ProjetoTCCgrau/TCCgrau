@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.map-container {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para as regiões */
+.region {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.region path, .region polygon {
+    stroke: #fff;
+    stroke-width: 0.5;
+    transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+/* Cores das Regiões */
+#norte path, #norte polygon { fill: #27ae60; }
+#nordeste path, #nordeste polygon { fill: #f39c12; }
+#centro-oeste path, #centro-oeste polygon { fill: #f1c40f; }
+#sudeste path, #sudeste polygon { fill: #e74c3c; }
+#sul path, #sul polygon { fill: #3498db; }
+
+/* Efeito de Hover por Região */
+.region:hover path, .region:hover polygon {
+    filter: brightness(1.1);
+    stroke-width: 1.5;
+}
+
+.region.active path, .region.active polygon {
+    filter: brightness(0.9);
+    stroke: #333;
+}
+
+/* Painel de Informações */
+.info-panel {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 2px solid #eee;
+    min-height: 120px;
+}
+
+.info-panel h2 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+}
+
+.info-panel p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
