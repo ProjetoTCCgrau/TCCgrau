@@ -9,7 +9,7 @@
   --accent-purple: #9b4dff;
   
   /*Cores de Fundo e Texto (Tema Escuro - Padrão)*/
-  --bg-gradient: linear-gradient(180deg, #0b0b0d, #161218);
+   --bg-gradient: radial-gradient(circle at 50% -15%, #24492d 0%, #0b2015 38%, #030b07 100%); /*controle total na parte inferior*/
   --text-main: #e5e5e5;
   --text-muted: #ccc;
   --card-bg: rgba(255, 255, 255, .03);
@@ -63,11 +63,11 @@ body.light-mode .btn {
   margin: 30px auto;
   padding: 0 15px;
 }
-
+/*muda so a parte de cima*/
 header {
   text-align: center;
   padding: 5px;
-  background: rgba(126, 25, 25, 0.4);
+  background: rgb(0, 0, 0);
   border-bottom: 1px solid rgba(255, 255, 255, .05);
 }
 
