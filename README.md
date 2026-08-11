@@ -1,5 +1,5 @@
-# Nome do projeto: Cineview
-Esse é um projeto focado no desenvolvimento de um site onde os usuários podem dar notas para filmes e ver onde eles estão disponíveis para assistir.
+# Nome do projeto: Obscurium
+Esse é um projeto focado no desenvolvimento de um site onde os usuários podem visualizar as descrições das principais lendas locais de cada região do país.
 
 # Instrução para rodar o site:
 Baixe o código-fonte e faça o download do repositório (botão Code > Download ZIP)
