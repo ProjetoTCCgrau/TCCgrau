@@ -1,0 +1,598 @@
+
+/* =========================================================
+   MAPA DAS LENDAS BRASILEIRAS
+   Tema: Verde Musgo Sombrio
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -15%,
+            #24492d 0%,
+            #0b2015 38%,
+            #030b07 100%
+        );
+
+    color: #e5e5e5;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 10px 0 15px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #050805,
+            #0b1409
+        );
+
+    border-bottom: 1px solid rgba(113, 140, 74, 0.2);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.65);
+}
+
+
+.logo {
+    width: 180px;
+    height: auto;
+
+    margin: 5px auto 10px;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(79, 111, 50, 0.35)
+        );
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+   ========================================================= */
+
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    color: #aeb7a8;
+
+    margin: 0 10px;
+
+    text-decoration: none;
+
+    font-family: 'Cinzel', Georgia, serif;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+nav a:hover {
+    color: #718c4a;
+
+    text-shadow:
+        0 0 10px
+        rgba(113, 140, 74, 0.5);
+}
+
+
+/* =========================================================
+   PERFIL
+   ========================================================= */
+
+.perfil-header {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #18351d,
+            #0d1c0d
+        );
+
+    border: 1px solid
+        rgba(113, 140, 74, 0.2);
+
+    color: #fff;
+
+    box-shadow:
+        0 0 12px
+        rgba(18, 96, 49, 0.55);
+}
+
+.perfil-header img {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #111;
+
+    border: 2px solid #718c4a;
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+
+.container {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(34, 57, 29, 0.65),
+            rgba(5, 13, 7, 0.88)
+        );
+
+    padding: 2rem;
+
+    margin: 40px auto;
+
+    border-radius: 14px;
+
+    border: 1px solid
+        rgba(113, 140, 74, 0.16);
+
+    box-shadow:
+        0 12px 40px
+        rgba(0, 0, 0, 0.7),
+
+        inset 0 0 30px
+        rgba(63, 90, 42, 0.08);
+
+    max-width: 900px;
+
+    width: 90%;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+h1,
+h2 {
+    font-family: 'Cinzel', Georgia, serif;
+}
+
+h1 {
+    color: #718c4a;
+
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 15px
+        rgba(113, 140, 74, 0.25);
+}
+
+h2 {
+    color: #718c4a;
+
+    margin-bottom: 0.6rem;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+   ========================================================= */
+
+.intro {
+    margin-bottom: 25px;
+}
+
+.intro p {
+    color: #aeb7a8;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SEÇÃO DO MAPA
+   ========================================================= */
+
+.map-section {
+    padding-top: 10px;
+}
+
+.map-section h2 {
+    font-size: 1.4rem;
+}
+
+.map-description {
+    color: #899683;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+
+.map-container {
+    margin: 0 auto;
+
+    max-width: 500px;
+
+    padding: 15px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(44, 74, 38, 0.22),
+            rgba(3, 10, 5, 0.5)
+        );
+
+    border-radius: 12px;
+
+    border: 1px solid
+        rgba(113, 140, 74, 0.15);
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0, 0, 0, 0.45),
+
+        0 0 20px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+svg {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================================
+   REGIÕES
+   ========================================================= */
+
+.region {
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.region path,
+.region polygon {
+    stroke: #172617;
+
+    stroke-width: 0.7;
+
+    transition:
+        fill 0.3s ease,
+        filter 0.3s ease,
+        stroke 0.3s ease;
+}
+
+
+/* =========================================================
+   CORES DAS REGIÕES
+   Todas seguem a paleta verde-musgo
+   ========================================================= */
+
+/* Norte */
+#norte path,
+#norte polygon {
+    fill: #355c35;
+}
+
+/* Nordeste */
+#nordeste path,
+#nordeste polygon {
+    fill: #536b32;
+}
+
+/* Centro-Oeste */
+#centro-oeste path,
+#centro-oeste polygon {
+    fill: #66783a;
+}
+
+/* Sudeste */
+#sudeste path,
+#sudeste polygon {
+    fill: #405b2b;
+}
+
+/* Sul */
+#sul path,
+#sul polygon {
+    fill: #294b2d;
+}
+
+
+/* =========================================================
+   HOVER DAS REGIÕES
+   ========================================================= */
+
+.region:hover path,
+.region:hover polygon {
+    filter:
+        brightness(1.3)
+        drop-shadow(
+            0 0 5px
+            rgba(113, 140, 74, 0.65)
+        );
+
+    stroke:
+        #9aaa68;
+
+    stroke-width: 1.5;
+}
+
+
+/* =========================================================
+   REGIÃO ATIVA
+   ========================================================= */
+
+.region.active path,
+.region.active polygon {
+    filter:
+        brightness(1.2)
+        drop-shadow(
+            0 0 8px
+            rgba(113, 140, 74, 0.7)
+        );
+
+    stroke: #c0ce8b;
+
+    stroke-width: 1.5;
+}
+
+
+/* =========================================================
+   PAINEL DE INFORMAÇÕES
+   ========================================================= */
+
+.info-panel {
+    margin-top: 2rem;
+
+    padding: 1.5rem;
+
+    border-top:
+        1px solid
+        rgba(113, 140, 74, 0.2);
+
+    border-bottom:
+        1px solid
+        rgba(113, 140, 74, 0.1);
+
+    min-height: 120px;
+
+    background:
+        rgba(8, 18, 9, 0.35);
+
+    border-radius: 8px;
+}
+
+
+.info-panel h2 {
+    margin: 0 0 0.6rem 0;
+
+    color: #718c4a;
+
+    font-family: 'Cinzel', Georgia, serif;
+}
+
+
+.info-panel p {
+    color: #9ca895;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   ÍCONE DO PAINEL
+   ========================================================= */
+
+.info-icon {
+    color: #718c4a;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+
+    text-shadow:
+        0 0 10px
+        rgba(113, 140, 74, 0.6);
+}
+
+
+/* =========================================================
+   FRASE DAS LENDAS
+   ========================================================= */
+
+.legend-quote {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    color: #87937f;
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    border-left:
+        2px solid
+        #4f6f32;
+
+    background:
+        rgba(25, 45, 23, 0.25);
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+        rgba(3, 8, 3, 0.85);
+
+    border-top:
+        1px solid
+        rgba(113, 140, 74, 0.12);
+
+    color: #778272;
+
+    font-size: 0.9rem;
+}
+
+footer p {
+    color: #718c4a;
+
+    font-family: 'Cinzel', Georgia, serif;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+
+        padding: 1.3rem;
+
+        margin: 25px auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        margin: 0 5px;
+
+        font-size: 12px;
+    }
+
+    .perfil-header {
+        top: 8px;
+        left: 8px;
+    }
+
+    .map-container {
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .logo {
+        width: 150px;
+    }
+
+    nav {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    nav a {
+        margin: 3px;
+    }
+
+    .container {
+        width: 96%;
+
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+    }
+}
+
