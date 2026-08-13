@@ -11,15 +11,20 @@
 <!--parte do header junto com o perfil-->
   <header>
    <img src="img\logo_obscurium1.png" alt="Logo do site" class="logo">
-  <div id="perfilHeader" class="perfil-header">
-    <img id="perfilFotoHeader" src="" alt="Foto de perfil">
+  <!-- Perfil -->
+<div id="perfilHeader" class="perfil-header">
+    <div id="perfilFotoHeader" class="avatar-padrao">
+        ♟
+    </div>
+
     <span id="perfilNomeHeader"></span>
-  </div>
+</div>
   <nav>
-    <a href="mapa_interativo/mapa.html">mapa</a>
-    <a href="avaliacoes.html">Avaliações</a>
+    <a href="index.html">Início</a>
+    <a href="mapa_interativo/mapa.html">Mapa</a>
     <a href="ranking.html">Ranking</a>
     <a href="comentario.html">Comentário</a>
+    <button id="btnTema" type="button" title="Alternar tema">Tema</button>
   </nav>
 </header>
 
@@ -27,79 +32,77 @@
 
     <!--parte da busca do site-->
     <div class="search">
-      <input type="text" id="searchInput" placeholder="Pesquisar filme">
+      <input type="text" id="searchInput" placeholder="Pesquisar lendas">
     </div>
 
-    <!--em cartaz-->
+    <!--Lendas mais populares-->
     <section class="cinema">
-      <h2>Em Cartaz nos Cinemas do Brasil</h2>
+      <h2>Lendas Mais Populares</h2>
 
       <div class="cinema-grid">
 
         <div class="card cinema-card">
-          <img src="img/ritual.jpg" height="350">
-          <h3>O Ritual (2025)</h3>
-          <p>Terror sobrenatural inspirado em exorcismos reais.</p>
-          <span>📍 Somente nos cinemas</span>
+          <img src="img/Boto Cor-de-Rosa.png" height="350">
+          <h3>Boto cor de Rosa</h3>
+          <p>Um boto que se transforma em homem e encanta as mulheres nas festas.</p>
+          <span>📍 Norte</span>
         </div>
 
         <div class="card cinema-card">
-          <img src="img/nosferatu.jpg" height="350">
-          <h3>Nosferatu</h3>
-          <p>Releitura moderna do clássico vampírico.</p>
-          <span>📍 Somente nos cinemas</span>
+          <img src="img/A Caipora.png" height="350">
+          <h3>Caipora</h3>
+          <p>Protetor das florestas e dos animais, que confunde ou assusta os caçadores.</p>
+          <span>📍 Nordeste</span>
         </div>
 
         <div class="card cinema-card">
-          <img src="img/imaculada.jpg" height="350">
-          <h3>Imaculada</h3>
-          <p>Religião, isolamento e horror psicológico.</p>
-          <span>📍 Somente nos cinemas</span>
+          <img src="img/Iara (Mãe-d'Água).png" height="350">
+          <h3>Iara</h3>
+          <p>Uma sereia dos rios que encanta os homens com sua beleza e seu canto.</p>
+          <span>📍 Norte</span>
         </div>
 
       </div>
     </section>
 
+<section class="Texto">
+
+      
+
+          <h3>O que é uma lenda?</h3>
+          <blockquote style="font-size: 20px;">Lendas são histórias passadas de geração em geração, misturando fatos reais e 
+            fictícios para explicar acontecimentos misteriosos ou sobrenaturais. 
+            Com o tempo, podem mudar devido 
+            à imaginação de quem as conta e fazem parte da cultura e das tradições dos povos.</blockquote>
+          
+        <br>
+<br>
+    </section>
+    
     <!--filmes-->
     <section class="grid">
 
 <article class="card">
-  <h3>O Escuro e o Perverso (2020)</h3>
-  <img src="img/1c71b2a2-2923-4823-b153-f7713db0e08b.jpg"
+  <h3>A Moura Torta</h3>
+  <img src="img/A Moura Torta.png"
   width="200" height="450">
-  <p>Família isolada é tomada por uma escuridão opressiva — terror psicológico, silencioso e inexorável.</p>
-  <span>⭐ Nota média: 9.5</span>
-  <div class="stars">
-  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
-  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
-  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
-  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
-  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
-</div>
+  <p>Família isolada é tomada por uma escuridão opressiva terror psicológico, silencioso e inexorável.</p>
+  
+  
   <div style="display:flex;gap:8px;margin-top:8px">
-    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/The-Dark-and-the-Wicked/0H45YVRHWFR87ZTIMWVXNFYMTP" target="_blank" rel="noopener">Prime Video</a>
-    <a class="btn btn--watch" href="https://tv.apple.com/br/movie/demoniaca/umc.cmc.52zo5vf92rxdxw5mozl9qy47g?action=play" target="_blank" rel="noopener">Apple TV</a>
-    <a class="btn btn--watch" href="https://www.youtube.com/watch?v=FwN8Crl_DxQ" target="_blank" rel="noopener">Trailer</a>
+    <a class="btn btn--watch" href="https://" target="_blank" rel="noopener">Clique para ler</a>
   </div>
 </article>
 
       <article class="card">
-  <h3>O Ritual (The Ritual)</h3>
-  <img src="img/ritual.jpg"
+  <h3>Vitória Régia</h3>
+  <img src="img/Vitória-Régia.png"
   width="200" height="450">
-  <p>Dois padres enfrentam o desconhecido e ritos que testam fé e sanidade — terror sobrenatural.</p>
-  <span>⭐ Nota média: 9.5</span>
-  <div class="stars">
-  <input type="radio" name="rate1" id="s5"><label for="s5">★</label>
-  <input type="radio" name="rate1" id="s4"><label for="s4">★</label>
-  <input type="radio" name="rate1" id="s3"><label for="s3">★</label>
-  <input type="radio" name="rate1" id="s2"><label for="s2">★</label>
-  <input type="radio" name="rate1" id="s1"><label for="s1">★</label>
-</div>
+  <p>Dois padres enfrentam o desconhecido e ritos que testam fé e sanidade terror sobrenatural.</p>
+  
   <div style="display:flex;gap:8px;margin-top:8px">
-    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/The-Ritual/0PWRQNRWI2AD1BAEU9HB9OO1NN" target="_blank" rel="noopener">Prime Video</a>
-    <a class="btn btn--watch" href="https://tv.apple.com/br/movie/o-ritual/umc.cmc.3egcwbkigp1kumjtpvg8h3ucf?playableId=tvs.sbd.9001%3A1839353034" target="_blank" rel="noopener">Apple TV</a>
-    <a class="btn btn--watch" href="https://www.youtube.com/watch?v=vUNce264uZI" target="_blank" rel="noopener">Trailer</a>
+    <a class="btn btn--watch" href="https://www.primevideo.com/-/pt/detail/The-Ritual/0PWRQNRWI2AD1BAEU9HB9OO1NN" target="_blank" rel="noopener">Clique para ler</a>
+    
   </div>
 </article>
 
@@ -395,9 +398,9 @@
 
   <footer>
     <p>
-      © 2026 — Cinneview • Avaliações na escuridão
+      © 2026 — Obscurium • 
       <br>
-      <span id="horaAtual"></span>
+      
     </p>
   </footer>
 

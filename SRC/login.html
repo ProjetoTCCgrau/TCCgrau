@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login — Cinneview</title>
+  <title>Cinneview</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
 
-<header>
-    <header><br>
-  <img src="img\logo_obscurium1.png" alt="Logo do site" class="logo">
-  <nav><br>
-    
-  </nav>
-</header>
+<!--parte do header junto com o perfil-->
+  <header>
+   <img src="img\logo_obscurium1.png" alt="Logo do site" class="logo">
+  <!-- Perfil -->
+<div id="perfilHeader" class="perfil-header">
+    <div id="perfilFotoHeader" class="avatar-padrao">
+        ♟
+    </div>
 
-<header>
-  
+    <span id="perfilNomeHeader"></span>
+</div>
   <nav>
-    <a href="index.html">Filmes</a>
-    <a href="avaliacoes.html">Avaliações</a>
+    <a href="index.html">Início</a>
+    <a href="mapa_interativo/mapa.html">Mapa</a>
     <a href="ranking.html">Ranking</a>
     <a href="comentario.html">Comentário</a>
     <button id="btnTema" type="button" title="Alternar tema">Tema</button>
@@ -54,8 +54,12 @@
 </main>
 
 <footer>
-  <p>© 2026 — Cinneview • Avaliações na escuridão <br> <span id="horaAtual"></span></p>
-</footer>
+    <p>
+      © 2026 — Obscurium • 
+      <br>
+      
+    </p>
+  </footer>
 
 </body>
 </html>

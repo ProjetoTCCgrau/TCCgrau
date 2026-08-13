@@ -3,24 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interativo do Brasil - Regiões</title>
+
+    <title>Mapa das Lendas Brasileiras</title>
+
     <link rel="stylesheet" href="mapa.css">
 </head>
 
-<!--parte do header junto com o perfil-->
-  <header>
-   <img src="img\logo_obscurium1.png" alt="Logo do site" class="logo">
-  <div id="perfilHeader" class="perfil-header">
-    <img id="perfilFotoHeader" src="" alt="Foto de perfil">
-    <span id="perfilNomeHeader"></span>
-  </div>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-top">
+
+            <img
+                src="img\logo_obscurium1.png"
+                alt="Logo do site"
+                class="logo"
+            >
+
+            <!-- Perfil -->
+            <div id="perfilHeader" class="perfil-header">
+
+                <img
+                    id="perfilFotoHeader"
+                    src=""
+                    alt="Foto de perfil"
+                >
+
+                <span id="perfilNomeHeader"></span>
+
+            </div>
+
+        </div>
+
+        <header>
+  
   <nav>
-    <a href="mapa_interativo/mapa.html">mapa</a>
+    <a href="index.html">Início</a>
     <a href="avaliacoes.html">Avaliações</a>
     <a href="ranking.html">Ranking</a>
     <a href="comentario.html">Comentário</a>
+    <button id="btnTema" type="button" title="Alternar tema">Tema</button>
   </nav>
 </header>
+
+
 
 <body>
     <div class="container">
@@ -90,3 +120,37 @@
     <script src="mapa.js"></script>
 </body>
 </html>
+<!-- ================= PAINEL DE INFORMAÇÕES ================= -->
+
+            <section
+                class="info-panel"
+                id="info-panel"
+            >
+
+                <div class="info-icon">
+                    ✦
+                </div>
+
+                <h2>
+                    Descubra uma lenda
+                </h2>
+
+                <p>
+                    Passe o mouse ou selecione uma região
+                    do mapa para conhecer suas histórias,
+                    personagens e mistérios.
+                </p>
+
+            </section>
+
+<footer>
+    <p>
+      © 2026 — Obscurium • 
+      <br>
+      
+    </p>
+  </footer>
+            
+
+
+    
