@@ -718,3 +718,128 @@ footer {
         inset 0 0 8px
         rgba(0, 0, 0, 0.6);
 }
+
+/* =========================================================
+   CARDS GRANDES DAS LENDAS DE UMA REGIÃO
+   Layout vertical (um card embaixo do outro), maior que os
+   cards do index. Copiado do estilo .card do index e ampliado.
+   Usado por todas as páginas de região (Sudeste, Norte, etc.).
+   ========================================================= */
+
+/* Container que empilha os cards verticalmente com espaçamento.
+   Nome genérico para ser usado em qualquer página de região. */
+.lendas-regiao {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* espaço entre os cards */
+}
+
+/* Card individual de uma lenda */
+.card-lenda {
+  /* Mesma paleta dos cards do index (rgba verde musgo) */
+  background: linear-gradient(
+    145deg,
+    rgba(48, 75, 40, 0.22),
+    rgba(8, 16, 8, 0.55)
+  );
+
+  padding: 28px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(113, 140, 74, 0.12);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(47, 75, 39, 0.08);
+
+  /* Imagem à esquerda, texto à direita */
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+
+  transition:
+    transform var(--transition-normal),
+    border var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+/* Efeito ao passar o mouse (igual ao hover dos cards do index) */
+.card-lenda:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(113, 140, 74, 0.35);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.75),
+    0 0 15px rgba(63, 90, 42, 0.15);
+}
+
+/* Imagem da lenda (bem maior que a dos cards do index) */
+.card-lenda img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover; /* corta a imagem sem distorcer */
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(113, 140, 74, 0.15);
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.55);
+}
+
+/* Bloco de informações ao lado da imagem */
+.card-lenda .lenda-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+/* Título da lenda (mesma fonte Cinzel do index, tamanho maior) */
+.card-lenda h3 {
+  font-family: var(--font-title);
+  color: var(--accent-green);
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+/* Descrição da lenda (texto maior que o do index) */
+.card-lenda p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+/* Tag da região (igual ao span "📍 Norte" do index) */
+.card-lenda .lenda-regiao {
+  font-size: 1rem;
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+/* Botão "Clique para ler" (mesmo estilo .btn .btn--watch do index) */
+.card-lenda .btn--leia {
+  align-self: flex-start;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Em telas pequenas: imagem em cima, texto embaixo */
+@media (max-width: 760px) {
+  .card-lenda {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-lenda img {
+    width: 100%;
+    max-width: 340px;
+    height: 400px;
+  }
+
+  .card-lenda .btn--leia {
+    align-self: center;
+  }
+}
