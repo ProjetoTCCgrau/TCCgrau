@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="centro-oeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Mãe do Ouro.png" alt="Ilustração do Corpo-Seco">
+                <figcaption>Ilustração da mãe_do_ouro</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do centro-oeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">mãe_do_ouro</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                   a Mãe do Ouro protege jazidas de ouro, pedras preciosas e outras riquezas naturais, impedindo que pessoas gananciosas explorem esses recursos
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-mãe_do_ouro">
+                <h2>Aparência</h2>
+                <p>
+                   A Mãe do Ouro é descrita como uma intensa bola de fogo dourada que atravessa o céu durante a noite, iluminando completamente a paisagem. Em algumas versões, transforma-se em uma mulher extremamente bonita, de longos cabelos dourados, vestes brilhantes e olhar misterioso. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-mãe_do_ouro">
+                <h2>Origem da criatura</h2>
+                <p>
+                  A lenda surgiu durante o período da mineração no Brasil e foi incorporada ao folclore de diversas regiões, incluindo Mato Grosso do Sul. Segundo a tradição, a Mãe do Ouro protege jazidas de ouro, pedras preciosas e outras riquezas naturais, impedindo que pessoas gananciosas explorem esses recursos de maneira irresponsável.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-mãe_do_ouro lenda-mãe_do_ouro--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Surge principalmente durante a noite</li>
+                    <li>Sobrevoa serras, campos, rios e áreas de mineração. </li>
+                    <li>Costuma aparecer em locais onde existem riquezas minerais. </li>
+                    <li>Desaparece rapidamente após ser observada. </li>
+                    <li>Evita aproximar-se de pessoas desonestas.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Emite uma luz extremamente intensa. </li>
+                    <li>Protege tesouros escondidos e riquezas naturais. </li>
+                    <li>Pode confundir viajantes e exploradores. </li>
+                    <li>Em algumas versões, transforma-se em mulher para testar a honestidade das pessoas</li>
+                    <li>Desaparece instantaneamente quando alguém tenta segui-la ou capturá-la. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                   Garimpeiros, viajantes e moradores antigos contam que viram uma grande bola de fogo cruzando o céu do Pantanal e desaparecendo sobre morros ou serras. Alguns afirmam que, ao tentar seguir sua luz, acabaram completamente perdidos ou retornaram ao ponto de partida sem perceber.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A Mãe do Ouro está presente em diversos estados brasileiros, sempre com pequenas diferenças</li>
+                    <li>Em algumas histórias, sua aparição anuncia a existência de ouro ou pedras preciosas</li>
+                    <li>Também é considerada uma protetora da natureza e das montanhas. </li>
+                    <li>Sua lenda é uma das mais antigas relacionadas à mineração no Brasil. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-mãe_do_ouro lenda-mãe_do_ouro--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                A Mãe do Ouro é um importante símbolo do folclore brasileiro e também faz parte das tradições de Mato Grosso do Sul. Sua história reforça a importância da preservação das riquezas naturais, condena a ganância e incentiva o uso consciente dos recursos do meio ambiente, mantendo viva uma das mais belas lendas populares do Centro-Oeste 
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>
