@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noiva da Lagoa dos Barros</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sul.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Noiva da Lagoa dos Barros.png" alt="Ilustração da Noiva da Lagoa dos Barros">
+                <figcaption>Ilustração da Noiva da Lagoa dos Barros</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sul</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Noiva da Lagoa dos Barros</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 Noiva da Lagoa dos Barros é uma lenda que circula na região do Rio Grande do Sul, seu espírito permaneceu no local à espera do noivo.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 A Noiva da Lagoa dos Barros é descrita como uma jovem muito bonita, vestida com um longo vestido branco, véu e buquê de flores. Seu rosto é pálido e demonstra profunda tristeza. Ela costuma aparecer caminhando às margens da lagoa ou observando a água em silêncio.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 Segundo a tradição, a jovem morreu antes de realizar seu casamento ou sofreu um acidente próximo à lagoa no dia da cerimônia. Desde então, seu espírito permaneceu no local à espera do noivo, transformando-se em uma das mais conhecidas histórias de assombração do estado.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Surge principalmente durante a madrugada.</li>
+                    <li>Aparece em noites de lua cheia ou com neblina.</li>
+                    <li>Caminha pelas margens da lagoa.</li>
+                    <li>Desaparece quando alguém tenta se aproximar.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Surge e desaparece sem deixar vestígios.</li>
+                    <li>Provoca sensação de frio intenso.</li>
+                    <li>Em algumas versões, seu choro pode ser ouvido durante a noite.</li>
+                    <li>Não costuma atacar pessoas, sendo vista como uma alma que busca paz.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                 Caçadores, pescadores e viajantes contam que viram uma mulher vestida de noiva caminhando perto da lagoa durante a noite. Alguns afirmam que, ao chamá-la, ela desaparecia lentamente na neblina, enquanto outros relatam ouvir choros vindos da margem.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A Lagoa dos Barros fica entre os municípios de Santo Antônio da Patrulha e Osório.</li>
+                    <li>A lenda possui diversas versões contadas pelos moradores da região.</li>
+                    <li>É uma das histórias de assombração mais conhecidas do litoral gaúcho.</li>
+                    <li>Atrai a curiosidade de visitantes e pesquisadores do folclore.</li>
+                </ul>
+            </article>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gruta da Lagoa Encantada</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sul.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Gruta da Lagoa Encantada.png" alt="Ilustração da Gruta da Lagoa Encantada">
+                <figcaption>Ilustração da Gruta da Lagoa Encantada</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sul</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Gruta da Lagoa Encantada</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 A Gruta da Lagoa Encantada é uma lenda que circula na região de Santa Catarina, contada entre moradores do litoral catarinense, que acreditavam que a gruta era um lugar sagrado e misterioso.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 A Gruta da Lagoa Encantada é descrita como uma caverna cercada por vegetação, águas cristalinas e formações rochosas impressionantes. Segundo a lenda, o local abriga passagens secretas, tesouros escondidos e espíritos que protegem a região.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                A lenda surgiu entre moradores do litoral catarinense, que acreditavam que a gruta era um lugar sagrado e misterioso. Histórias antigas afirmam que antigos navegadores e exploradores esconderam riquezas no local, protegidas por encantamentos e seres sobrenaturais.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Os espíritos permanecem protegendo a gruta.</li>
+                    <li>Aparecem principalmente durante a noite.</li>
+                    <li>Manifestam-se por luzes ou sons misteriosos.</li>
+                    <li>Impedem que pessoas gananciosas encontrem os tesouros.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Protege riquezas escondidas.</li>
+                    <li>Cria ilusões para confundir invasores.</li>
+                    <li>Provoca fenômenos misteriosos.</li>
+                    <li>Em algumas versões, revela seus segredos apenas para pessoas de bom coração.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                 Caçadores, pescadores e aventureiros contam que já ouviram vozes e viram luzes saindo da gruta durante a noite. Alguns afirmam que encontraram entradas que desapareciam pouco tempo depois, como se o local estivesse encantado.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>Existem diversas versões dessa lenda em diferentes regiões de Santa Catarina.</li>
+                    <li>Muitas histórias relacionam a gruta a antigos tesouros escondidos.</li>
+                    <li>O mistério do local desperta curiosidade entre moradores e turistas.</li>
+                    <li>A tradição é transmitida oralmente há muitas gerações.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                 A Gruta da Lagoa Encantada faz parte do rico folclore catarinense. Sua história valoriza o patrimônio natural do estado, preserva as tradições populares e desperta o interesse pela cultura e pelos mistérios das paisagens de Santa Catarina.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

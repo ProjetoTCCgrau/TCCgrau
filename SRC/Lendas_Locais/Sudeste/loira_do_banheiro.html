@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loira do Banheiro</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sudeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Loira do Banheiro.png" alt="Ilustração da Loira do Banheiro">
+                <figcaption>Ilustração da Loira do Banheiro</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sudeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Loira do Banheiro</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                  A Loira do Banheiro é uma lenda que circula na região de São Paulo, contando a história de uma mulher misteriosa que aparece em banheiros escolares.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 A Loira do Banheiro é descrita como uma mulher muito pálida, de cabelos longos e loiros, usando um vestido branco ou uniforme antigo. Em algumas versões, aparece com o rosto machucado, olhos escuros ou cobertos pelos cabelos, tornando sua aparência ainda mais assustadora.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                A lenda surgiu em escolas paulistas e ganhou popularidade a partir da década de 1980. Existem várias versões sobre sua origem: algumas dizem que ela era uma estudante que morreu tragicamente; outras afirmam que era uma jovem vítima de um acidente ou de um assassinato. Após sua morte, seu espírito teria passado a assombrar banheiros escolares.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Aparece principalmente em banheiros de escolas.</li>
+                    <li>Costuma surgir quando o local está vazio.</li>
+                    <li>Em algumas versões, responde a desafios feitos por estudantes.</li>
+                    <li>Desaparece rapidamente após ser vista.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Surge e desaparece sem deixar rastros.</li>
+                    <li>Provoca sustos e sensação de frio.</li>
+                    <li>Em algumas histórias, faz portas baterem, torneiras se abrirem e espelhos apresentarem imagens estranhas.</li>
+                    <li>Costuma assustar, mas raramente é descrita como agressiva.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                Embora não existam relatos de caçadores, estudantes, professores e funcionários afirmam ter ouvido barulhos estranhos, visto vultos ou percebido uma figura feminina refletida nos espelhos dos banheiros. Ao tentar verificar, a aparição desaparecia.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>É uma das lendas urbanas mais famosas do Brasil.</li>
+                    <li>Existem diversas versões da história em diferentes estados.</li>
+                    <li>Tornou-se muito conhecida entre estudantes.</li>
+                    <li>Inspirou livros, séries, filmes e programas de televisão.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                 A Loira do Banheiro é um dos maiores símbolos do folclore urbano brasileiro. A lenda preserva histórias populares contadas entre estudantes e faz parte da cultura escolar de várias gerações.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

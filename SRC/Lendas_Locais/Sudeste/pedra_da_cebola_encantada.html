@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedra da Cebola Encantada</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sudeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Pedra da Cebola Encantada.png" alt="Ilustração da Pedra da Cebola Encantada">
+                <figcaption>Ilustração da Pedra da Cebola Encantada</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sudeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Pedra da Cebola Encantada</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                A Pedra da Cebola Encantada é uma lenda que circula na região do Espírito Santo, contando a história de uma pedra misteriosa que aparece em locais isolados da serra.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 A Pedra da Cebola é uma enorme formação rochosa localizada em Vitória. Seu formato arredondado lembra uma cebola gigante, característica que deu origem ao seu nome. Segundo a lenda, a pedra possui uma energia misteriosa e muda de aparência conforme a luz do dia.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 A lenda surgiu entre os antigos moradores de Vitória, que acreditavam que a pedra era encantada e possuía poderes sobrenaturais. Alguns diziam que espíritos antigos protegiam o local e impediam que ele fosse destruído.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Permanece no mesmo local há milhares de anos.</li>
+                    <li>Em algumas histórias, manifesta seu encanto durante tempestades ou noites de lua cheia.</li>
+                    <li>Diz-se que transmite boas energias para quem visita o parque.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Representa estabilidade e proteção.</li>
+                    <li>Algumas versões afirmam que possui poderes espirituais.</li>
+                    <li>Diz-se que concede sorte e tranquilidade às pessoas que respeitam o local.</li>
+                    <li>Em outras histórias, protege a natureza ao seu redor.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                 Antigos moradores relatavam ver luzes, ouvir sons misteriosos ou sentir uma forte sensação de paz ao passar próximo à pedra durante a noite. Outros afirmavam que quem tentava danificá-la sofria com azar ou desistia da ideia.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A Pedra da Cebola é um dos principais pontos turísticos de Vitória.</li>
+                    <li>Atualmente, está localizada no Parque Pedra da Cebola.</li>
+                    <li>Apesar da lenda, trata-se de uma formação geológica natural.</li>
+                    <li>É um símbolo muito conhecido pelos moradores da capital capixaba.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                 A Pedra da Cebola Encantada é um importante símbolo do Espírito Santo. Sua lenda fortalece a identidade cultural dos capixabas, incentiva a preservação do patrimônio natural e mantém viva uma das histórias mais conhecidas da tradição popular do estado.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

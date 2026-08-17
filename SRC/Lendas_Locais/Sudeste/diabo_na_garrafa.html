@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabo na Garrafa</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sudeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Diabo na Garrafa.png" alt="Ilustração do Diabo na Garrafa">
+                <figcaption>Ilustração do Diabo na Garrafa</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sudeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Diabo na Garrafa</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                    O Diabo na Garrafa é uma lenda que circula na região de São Paulo, contando a história de um homem que libera um diabo de uma garrafa.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                    O Diabo na Garrafa é descrito como um pequeno ser de aparência demoníaca, com pele avermelhada, chifres, cauda e olhos brilhantes. Em algumas versões, aparece apenas como uma sombra ou fumaça escura presa dentro de uma antiga garrafa de vidro.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                  Segundo a lenda, um homem conseguiu prender um demônio dentro de uma garrafa por meio de um ritual ou encantamento. A criatura prometia conceder riquezas, poder e sucesso a quem a libertasse, mas, em troca, exigia um preço muito alto, geralmente relacionado à felicidade ou ao destino da pessoa. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Permanece preso dentro da garrafa até ser libertado.</li>
+                    <li>Faz promessas de riqueza e prosperidade.</li>
+                    <li>Tenta convencer as pessoas a aceitar seus acordos.</li>
+                    <li>Em algumas versões, muda de dono ao longo dos anos.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Concede riquezas e realiza desejos.</li>
+                    <li>Pode influenciar as decisões das pessoas.</li>
+                    <li>Usa ilusões e promessas para enganar suas vítimas.</li>
+                    <li>Desaparece quando seu acordo é rompido ou termina.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                    Caçadores, viajantes e moradores antigos contam que encontraram garrafas misteriosas em matas ou casas abandonadas. Alguns dizem ter ouvido uma voz pedindo para ser libertada. Assustados, preferiam abandonar o objeto e deixar o local imediatamente.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A lenda possui diferentes versões no Brasil e em outros países.</li>
+                    <li>É considerada uma das histórias mais antigas do folclore brasileiro.</li>
+                    <li>Simboliza os perigos da ganância e dos atalhos para conquistar riqueza.</li>
+                    <li>Inspirou contos populares e adaptações literárias.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                    O Diabo na Garrafa é uma importante lenda do folclore paulista. A história transmite ensinamentos sobre honestidade, responsabilidade e as consequências da ambição desmedida, preservando uma tradição popular que atravessa gerações.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

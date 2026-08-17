@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maldição da Ilha Fiscal</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sudeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Maldição da Ilha Fiscal.png" alt="Ilustração da Maldição da Ilha Fiscal">
+                <figcaption>Ilustração da Maldição da Ilha Fiscal</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sudeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Maldição da Ilha Fiscal</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                    A Maldição da Ilha Fiscal é uma lenda que circula na região do Rio de Janeiro, contando a história de uma ilha misteriosa onde ocorrem fenômenos sobrenaturais.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                A Maldição da Ilha Fiscal não está ligada a uma criatura específica, mas à presença de espíritos e aparições no castelo da ilha. Visitantes relatam ver vultos vestidos com roupas do século XIX, ouvir passos pelos corredores e perceber sombras próximas às janelas.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                A lenda surgiu porque a Ilha Fiscal foi palco do famoso Último Baile do Império, realizado poucos dias antes da Proclamação da República, em 1889. Muitas pessoas acreditam que o local ficou marcado pela queda do Império Brasileiro e que os espíritos daqueles que participaram do baile ainda permanecem na ilha.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>As aparições ocorrem principalmente durante a noite.</li>
+                    <li>Sons de passos e portas são ouvidos sem explicação.</li>
+                    <li>Vultos caminham pelos corredores do castelo.</li>
+                    <li>As manifestações desaparecem rapidamente.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Aparece e desaparece misteriosamente.</li>
+                    <li>Provoca sensação de frio intenso.</li>
+                    <li>Produz ruídos e movimentos inexplicáveis.</li>
+                    <li>Em algumas versões, revive cenas do antigo baile imperial.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                Embora não existam relatos de caçadores, vigias, funcionários e visitantes afirmam ter ouvido vozes, passos e visto sombras caminhando pelo castelo durante a madrugada. Alguns dizem sentir uma forte presença, mesmo estando completamente sozinhos.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A Ilha Fiscal recebeu o último grande baile da monarquia brasileira.</li>
+                    <li>O castelo possui arquitetura inspirada no estilo gótico francês.</li>
+                    <li>É um dos monumentos históricos mais famosos do Rio de Janeiro.</li>
+                    <li>A lenda desperta grande interesse entre turistas e estudiosos do folclore.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                A Maldição da Ilha Fiscal une história e folclore, preservando a memória de um importante momento da história do Brasil. A narrativa também desperta interesse pelo patrimônio histórico e cultural do Rio de Janeiro.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

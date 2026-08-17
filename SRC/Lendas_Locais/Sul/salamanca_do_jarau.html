@@ -1,11 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salamanca do Jarau</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sul.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Salamanca do Jarau.png" alt="Ilustração do Salamanca do Jarau">
+                <figcaption>Ilustração do Salamanca do Jarau</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sul</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Salamanca do Jarau</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 Salamanca do Jarau é uma lenda que circula na região do Rio Grande do Sul, protegendo um reino subterrâneo repleto de ouro e pedras preciosas.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 A Salamanca do Jarau é descrita como um reino encantado escondido no Cerro do Jarau, formado por cavernas, salões subterrâneos e grandes riquezas. Segundo a lenda, o local é habitado por uma princesa encantada que, em algumas versões, aparece como uma bela mulher de longos cabelos negros e olhos brilhantes. Em outras, ela assume a forma de uma enorme serpente de escamas douradas, guardiã dos tesouros do cerro.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 A lenda nasceu na região do Cerro do Jarau, no município de Quaraí, na fronteira do Rio Grande do Sul com o Uruguai. Ela reúne elementos das tradições indígenas, espanholas e portuguesas. Conta-se que uma princesa moura foi vítima de um poderoso encantamento e passou a viver no interior do cerro, protegendo um reino subterrâneo repleto de ouro e pedras preciosas. Somente uma pessoa de coragem e coração puro seria capaz de quebrar a maldição.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Vive no reino encantado escondido no interior do Cerro do Jarau.</li>
+                    <li>Costuma aparecer durante a noite ou em noites de lua cheia.</li>
+                    <li>Protege os tesouros e os segredos da montanha.</li>
+                    <li>Raramente é vista por pessoas comuns.</li>
+                    <li>Desaparece rapidamente quando alguém tenta se aproximar.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Guarda um poderoso encantamento sobre o reino subterrâneo.</li>
+                    <li>Pode assumir diferentes formas, conforme a versão da lenda.</li>
+                    <li>Cria ilusões para afastar pessoas gananciosas.</li>
+                    <li>Protege antigas riquezas escondidas.</li>
+                    <li>Em algumas versões, concede sorte e prosperidade àqueles que demonstram coragem e honestidade.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                 Tropeiros, viajantes e moradores antigos contam que ouviram vozes, viram luzes misteriosas e encontraram entradas para cavernas que desapareciam pouco tempo depois. Alguns afirmam ter visto uma bela mulher próxima ao cerro, que desaparecia misteriosamente antes de qualquer aproximação.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A lenda inspirou a obra A Salamanca do Jarau, do escritor João Simões Lopes Neto.</li>
+                    <li>O Cerro do Jarau é considerado um importante patrimônio geológico e cultural do Rio Grande do Sul.</li>
+                    <li>Existem diversas versões sobre a identidade da princesa encantada.</li>
+                    <li>A história mistura elementos do folclore gaúcho com antigas tradições europeias.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                 A Salamanca do Jarau é uma das maiores lendas do Rio Grande do Sul. A narrativa preserva a tradição oral gaúcha, fortalece a identidade cultural do estado e valoriza o patrimônio histórico, natural e folclórico da região da Campanha Gaúcha.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

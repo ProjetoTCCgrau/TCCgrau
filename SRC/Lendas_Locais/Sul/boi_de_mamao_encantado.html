@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boi de Mamão Encantado</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sul.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="../../img/Boi de Mamão Encantado.png" alt="Ilustração do Boi de Mamão Encantado">
+                <figcaption>Ilustração do Boi de Mamão Encantado</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Sul</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Boi de Mamão Encantado</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 O boi de mamão é uma lenda que circula na região de Santa Catarina do Brasil, contando a história de um boi que se transforma em um ser misterioso após morrer.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 O Boi de Mamão é representado por um grande boi colorido, feito de madeira, tecido e papel, com chifres e olhos chamativos. Durante as apresentações, é conduzido por pessoas que dão vida ao personagem por meio de danças, músicas e brincadeiras.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 A tradição foi trazida pelos colonizadores açorianos e adaptada à cultura catarinense. A lenda conta que um boi muito querido morre e, graças à intervenção de personagens mágicos e curandeiros, volta à vida, simbolizando renovação, esperança e alegria.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Participa de festas populares e apresentações folclóricas.</li>
+                    <li>Dança ao som de músicas tradicionais.</li>
+                    <li>Interage com o público de forma divertida.</li>
+                    <li>Representa celebração e união da comunidade.</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Na lenda, retorna à vida após morrer.</li>
+                    <li>Simboliza renovação e prosperidade.</li>
+                    <li>Leva alegria por onde passa.</li>
+                    <li>Une diferentes personagens do folclore em uma única apresentação.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <p>
+                 Não existem relatos de caçadores, pois o Boi de Mamão está ligado às festas populares. Segundo a tradição, quem assiste às apresentações participa simbolicamente do encantamento que faz o boi reviver.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>O Boi de Mamão é uma das manifestações folclóricas mais importantes de Santa Catarina.</li>
+                    <li>Envolve música, dança, teatro e personagens tradicionais.</li>
+                    <li>É muito apresentado em escolas, festas e eventos culturais.</li>
+                    <li>Foi reconhecido como importante patrimônio cultural do estado.</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                 O Boi de Mamão é um dos maiores símbolos da cultura catarinense. A tradição preserva costumes trazidos pelos açorianos, incentiva a participação da comunidade e mantém viva uma importante manifestação do folclore brasileiro.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>
