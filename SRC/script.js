@@ -1,4 +1,4 @@
-//UTILITÁRIOS GLOBAIS
+// UTILITÁRIOS GLOBAIS
 const debounce = (func, delay) => {
   let timer;
   return (...args) => {
@@ -7,7 +7,7 @@ const debounce = (func, delay) => {
   };
 };
 
-//mostra a mensagem de exibição e notificações visuais
+// Mostra a mensagem de exibição e notificações visuais
 function mostrarMensagem(msg) {
   const box = document.createElement('div');
   box.textContent = msg;
@@ -44,13 +44,10 @@ function calcularMedia() {
   return media;
 }
 
-//INICIALIZAÇÃO
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // Cache de estado global
-  const usuarioLogado = localStorage.getItem("usuarioLogado");
+// INICIALIZAÇÃO
+document.addEventListener('DOMContentLoaded', async () => {
 
-  //LOGICA PARA EXIBIR A HORA
+  // LÓGICA PARA EXIBIR A HORA
   const elHora = document.getElementById('horaAtual');
   if (elHora) {
     const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
@@ -104,22 +101,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnBuscar) btnBuscar.addEventListener("click", filtrarFilmes);
   }
 
-  // LOGICA PARA O TEMA DO SITE
+  // LÓGICA PARA O TEMA DO SITE
   const btnTema = document.getElementById("btnTema");
   if (btnTema) {
     if (localStorage.getItem("tema") === "claro") document.body.classList.add("light-mode");
 
-    btnTema.addEventListener("click", () => {
+    btnTema.addEventListener("click", async () => {
       const isLight = document.body.classList.toggle("light-mode");
       const temaAtual = isLight ? "claro" : "escuro";
       localStorage.setItem("tema", temaAtual);
       mostrarMensagem(`Tema ${temaAtual} ativado`);
+
+      // Atualiza preferência no Supabase se houver usuário logado
+      const { data: { session } } = await _supabase.auth.getSession();
+      if (session) {
+        await _supabase
+          .from('perfis')
+          .update({ tema_pref: temaAtual })
+          .eq('id', session.user.id);
+      }
     });
   }
 
   // FORMULÁRIOS
 
-  //FORMULÁRIO DE AVALIAÇÃO
+  // FORMULÁRIO DE AVALIAÇÃO
   const formAvaliacao = document.querySelector('.formulario:not(#formLogin):not(#formCadastro)');
   if (formAvaliacao) {
     formAvaliacao.addEventListener('submit', e => {
@@ -130,113 +136,266 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //FORMULÁRIO DO LOGIN
-  const formLogin = document.getElementById("formLogin");
-  if (formLogin) {
-    formLogin.addEventListener("submit", e => {
-      e.preventDefault();
-      const user = document.getElementById("logUser")?.value.trim();
-      const pass = document.getElementById("logPass")?.value.trim();
-      
-      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-      const valido = usuarios.find(u => u.user === user && u.pass === pass);
+// ==========================================
+// FORMULÁRIO DO LOGIN (INTEGRADO AO SUPABASE)
+// ==========================================
+const formLogin = document.getElementById("formLogin");
 
-      if (!valido) return mostrarMensagem("Usuário ou senha incorretos!");
+if (formLogin) {
+  formLogin.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-      localStorage.setItem("usuarioLogado", user);
-      mostrarMensagem(`Bem-vindo, ${user}!`);
-      setTimeout(() => window.location.href = "index.html", 1000);
-    });
-  }
+    const client = window._supabase || (typeof _supabase !== 'undefined' ? _supabase : null);
 
-  //FORMULÁRIO DO CADASTRO
-  const formCadastro = document.getElementById("formCadastro");
-  if (formCadastro) {
-    formCadastro.addEventListener("submit", e => {
-      e.preventDefault();
-      const user = document.getElementById("cadUser")?.value.trim();
-      const pass = document.getElementById("cadPass")?.value.trim();
-
-      if (!user || !pass) return mostrarMensagem("Preencha todos os campos!");
-
-      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-      if (usuarios.some(u => u.user === user)) return mostrarMensagem("Este usuário já existe!");
-
-      usuarios.push({ user, pass });
-      localStorage.setItem("usuarios", JSON.stringify(usuarios));
-      mostrarMensagem("Conta criada com sucesso!");
-      setTimeout(() => window.location.href = "login.html", 1200);
-    });
-  }
-
-  //PERFIL E CABEÇALHO
-
-  // FUNÇÃO PARA ATUALIZAR O ÍCONE E NOME NO HEADER
-  function atualizarHeaderPerfil() {
-    const perfilHeader = document.getElementById("perfilHeader");
-    const nomeHeader = document.getElementById("perfilNomeHeader");
-    const fotoHeader = document.getElementById("perfilFotoHeader");
-
-    if (!perfilHeader) return;
-
-    if (!usuarioLogado) {
-      perfilHeader.classList.add("sem-login");
-      perfilHeader.onclick = () => window.location.href = "login.html";
+    if (!client) {
+      mostrarMensagem("Erro de conexão com o Supabase.");
       return;
     }
 
-    perfilHeader.classList.remove("sem-login");
-    if (nomeHeader) nomeHeader.textContent = usuarioLogado;
-    
-    const foto = localStorage.getItem(`fotoPerfil_${usuarioLogado}`);
-    if (fotoHeader) fotoHeader.src = foto || "img/user-default.png";
+    const loginInput = document.getElementById("logUser")?.value.trim();
+    const pass = document.getElementById("logPass")?.value.trim();
 
-    perfilHeader.onclick = () => window.location.href = "perfil.html";
+    if (!loginInput || !pass) return mostrarMensagem("Preencha todos os campos!");
+
+    try {
+      let emailParaLogin = loginInput;
+
+      // Se o usuário não digitou um e-mail (sem '@'), busca o e-mail na tabela 'perfis'
+      if (!loginInput.includes("@")) {
+        const { data: perfilData, error: perfilError } = await client
+          .from("perfis")
+          .select("email")
+          .ilike("usuario", loginInput)
+          .maybeSingle();
+
+        if (perfilError || !perfilData) {
+          return mostrarMensagem("Usuário não encontrado!");
+        }
+
+        emailParaLogin = perfilData.email;
+      }
+
+      // Garante a limpeza de sessões antigas com falha
+      await client.auth.signOut();
+
+      // Realiza a autenticação com o Supabase Auth
+      const { data, error } = await client.auth.signInWithPassword({
+        email: emailParaLogin,
+        password: pass
+      });
+
+      if (error) {
+        console.error("Erro no login:", error.message);
+        return mostrarMensagem("Senha ou usuário incorretos!");
+      }
+
+      mostrarMensagem("Login realizado com sucesso!");
+      setTimeout(() => window.location.href = "index.html", 1000);
+
+    } catch (err) {
+      console.error("Erro geral no login:", err);
+      mostrarMensagem("Falha ao realizar login.");
+    }
+  });
+}
+
+// ==========================================
+// FORMULÁRIO DO CADASTRO
+// ==========================================
+const formCadastro = document.getElementById("formCadastro");
+
+if (formCadastro) {
+  formCadastro.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const client = window._supabase || (typeof _supabase !== 'undefined' ? _supabase : null);
+
+    if (!client) {
+      alert("Erro de conexão com o banco.");
+      return;
+    }
+
+    const usuario = document.getElementById("cadUser")?.value.trim();
+    const email = document.getElementById("cadEmail")?.value.trim();
+    const senha = document.getElementById("cadPass")?.value.trim();
+
+    try {
+      // Cria a conta no Auth (a Trigger do Supabase cria a linha em public.perfis automaticamente)
+      const { data, error } = await client.auth.signUp({
+        email: email,
+        password: senha,
+        options: {
+          data: {
+            usuario_nome: usuario
+          }
+        }
+      });
+
+      if (error) throw error;
+
+      alert("Conta criada com sucesso!");
+      window.location.href = "login.html";
+
+    } catch (err) {
+      console.error("Erro no cadastro:", err);
+      alert("Erro ao cadastrar: " + (err.message || "Verifique os dados digitados."));
+    }
+  });
+}
+
+// ==========================================
+// ATUALIZAR ÍCONE E LINK DO PERFIL NO HEADER
+// ==========================================
+async function atualizarHeaderPerfil() {
+  const client = window._supabase || (typeof _supabase !== 'undefined' ? _supabase : null);
+  if (!client) return;
+
+  const perfilHeader = document.getElementById("perfilHeader");
+  const nomeHeader = document.getElementById("perfilNomeHeader");
+  const fotoHeader = document.getElementById("perfilFotoHeader");
+
+  if (!perfilHeader) return;
+
+  // Busca a sessão do usuário logado
+  const { data: { session } } = await client.auth.getSession();
+  const usuario = session?.user;
+
+  if (!usuario) {
+    perfilHeader.classList.add("sem-login");
+    if (nomeHeader) nomeHeader.textContent = "Entrar";
+    perfilHeader.onclick = (e) => {
+      e.preventDefault();
+      window.location.href = "login.html";
+    };
+    return;
   }
 
-  //LÓGICA DA PÁGINA DE PERFIL
+  perfilHeader.classList.remove("sem-login");
+
+  // Consulta dados do perfil no banco
+  const { data: perfil } = await client
+    .from('perfis')
+    .select('usuario, foto_perfil')
+    .eq('id', usuario.id)
+    .maybeSingle();
+
+  if (nomeHeader) nomeHeader.textContent = perfil?.usuario || usuario.email;
+
+  const fotoPadrao = 'img/logo_obscurium1.png';
+  if (fotoHeader) {
+    fotoHeader.src = (perfil?.foto_perfil && perfil.foto_perfil.trim() !== '') 
+      ? perfil.foto_perfil 
+      : fotoPadrao;
+
+    fotoHeader.onerror = () => { fotoHeader.src = fotoPadrao; };
+  }
+
+  perfilHeader.onclick = (e) => {
+    e.preventDefault();
+    window.location.href = "perfil.html";
+  };
+}
+
+// ==========================================
+// LÓGICA DA PÁGINA DE PERFIL (perfil.html)
+// ==========================================
+async function carregarPaginaPerfil() {
   const nomePerfil = document.getElementById("nomeUsuarioPerfil");
   const fotoPerfil = document.getElementById("fotoPerfilPreview");
   const fotoInput = document.getElementById("fotoPerfilInput");
-  if (nomePerfil || fotoPerfil) {
-    if (!usuarioLogado) {
+  const btnSair = document.getElementById("btnSair");
 
-      // Redireciona apenas se estiver na página de perfil sem login
-      if (window.location.pathname.includes("perfil.html")) {
-        mostrarMensagem("Você precisa estar logado!");
-        setTimeout(() => window.location.href = "login.html", 1000);
-      }
-    } else {
-      if (nomePerfil) nomePerfil.textContent = usuarioLogado;
-      const chaveFoto = `fotoPerfil_${usuarioLogado}`;
-      if (fotoPerfil) fotoPerfil.src = localStorage.getItem(chaveFoto) || "img/user-default.png";
+  if (!nomePerfil && !fotoPerfil) return;
 
-      if (fotoInput) {
-        fotoInput.addEventListener("change", e => {
-          const file = e.target.files[0];
-          if (!file) return;
-          const reader = new FileReader();
-          reader.onload = ev => {
-            localStorage.setItem(chaveFoto, ev.target.result);
-            if (fotoPerfil) fotoPerfil.src = ev.target.result;
-            atualizarHeaderPerfil(); // Sincroniza o header
-            mostrarMensagem("Foto atualizada!");
-          };
-          reader.readAsDataURL(file);
-        });
-      }
-    }
+  const client = window._supabase || (typeof _supabase !== 'undefined' ? _supabase : null);
+  if (!client) return;
+
+  const { data: { session } } = await client.auth.getSession();
+  const usuario = session?.user;
+
+  if (!usuario) {
+    mostrarMensagem("Você precisa estar logado para acessar seu perfil!");
+    setTimeout(() => window.location.href = "login.html", 1200);
+    return;
   }
-  //INICIALIZA O HEADER
+
+  const { data: perfil } = await client
+    .from('perfis')
+    .select('usuario, foto_perfil')
+    .eq('id', usuario.id)
+    .maybeSingle();
+
+  if (nomePerfil) nomePerfil.textContent = perfil?.usuario || usuario.email;
+
+  const fotoPadrao = 'img/logo_obscurium1.png';
+
+  if (fotoPerfil) {
+    fotoPerfil.src = (perfil?.foto_perfil && perfil.foto_perfil.trim() !== '') 
+      ? perfil.foto_perfil 
+      : fotoPadrao;
+
+    fotoPerfil.onerror = () => {
+      fotoPerfil.src = fotoPadrao;
+    };
+  }
+
+  if (btnSair) {
+    btnSair.addEventListener("click", async () => {
+      await client.auth.signOut();
+      window.location.href = "login.html";
+    });
+  }
+
+  if (fotoInput) {
+    fotoInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = async (ev) => {
+        const novaFoto = ev.target.result;
+
+        const { error } = await client
+          .from('perfis')
+          .update({ foto_perfil: novaFoto })
+          .eq('id', usuario.id);
+
+        if (!error) {
+          if (fotoPerfil) fotoPerfil.src = novaFoto;
+          atualizarHeaderPerfil();
+          mostrarMensagem("Foto atualizada com sucesso!");
+        } else {
+          mostrarMensagem("Erro ao salvar foto no perfil!");
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+}
+
+// Inicializa as funções após o carregamento do DOM
+document.addEventListener('DOMContentLoaded', () => {
+  atualizarHeaderPerfil();
+  carregarPaginaPerfil();
+});
+
+  // Inicializa o Header
   atualizarHeaderPerfil();
 
-  //BOTÃO DE LOGOUT
+  // BOTÃO DE LOGOUT
   const btnLogout = document.getElementById("btnLogout");
   if (btnLogout) {
-    btnLogout.addEventListener("click", () => {
-      localStorage.removeItem("usuarioLogado");
+    btnLogout.addEventListener("click", async () => {
+      await _supabase.auth.signOut();
       mostrarMensagem("Você saiu da conta!");
       setTimeout(() => window.location.href = "login.html", 1000);
     });
   }
 });
+
+// Garante o fallback do cliente Supabase
+const _supabase = window._supabase;
+
+if (!_supabase) {
+  console.warn("Cliente Supabase não encontrado na janela global.");
+}

@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obscurium</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../BD/supabaseClient.js"></script>
   <script src="script.js" defer></script>
 </head>
 
 <!--parte do header junto com o perfil-->
   <header>
-   <img src="img\logo_obscurium1.png" alt="Logo do site" class="logo">
-  <!-- Perfil -->
-<div id="perfilHeader" class="perfil-header">
-    <div id="perfilFotoHeader" class="avatar-padrao">
-        ♟
-    </div>
+  <img src="img/logo_obscurium1.png" alt="Logo do site" class="logo">
+  
+  <!-- Perfil com tag de link <a> em vez de <div> -->
+  <a href="login.html" id="perfilHeader" class="perfil-header sem-login">
+    <div id="perfilFotoHeader" class="avatar-padrao">♟</div>
+    <span id="perfilNomeHeader">Entrar / Cadastrar</span>
+  </a>
 
-    <span id="perfilNomeHeader"></span>
-</div>
   <nav>
     <a href="index.html">Início</a>
     <a href="mapa_interativo/mapa.html">Mapa</a>
