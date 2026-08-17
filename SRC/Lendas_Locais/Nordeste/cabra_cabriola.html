@@ -1,11 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Cabra Cabriola.png" alt="Ilustração do cabra_cabriola">
+                <figcaption>Ilustração do cabra_cabriola</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">cabra_cabriola</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                  A lenda surgiu no Nordeste brasileiro, especialmente no Rio Grande do Norte, durante o século XIX. Era utilizada pelos pais para assustar crianças desobedientes e impedir que saíssem de casa à noite.  
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                  O Cabra Cabriola é descrito como uma criatura assustadora, com corpo semelhante ao de um homem, cabeça de cabra, grandes chifres, olhos vermelhos brilhantes e longas garras. Em algumas versões, possui pelos escuros e dentes afiados, tornando sua aparência ainda mais assustadora.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                Origem da criatura 
+
+A lenda surgiu no Nordeste brasileiro, especialmente no Rio Grande do Norte, durante o século XIX. Era utilizada pelos pais para assustar crianças desobedientes e impedir que saíssem de casa à noite. Com o tempo, tornou-se uma das criaturas mais conhecidas do folclore nordestino.    
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Aparece durante a noite</li>
+                    <li>Costuma andar por ruas desertas, matas e terrenos afastados. </li>
+                    <li>Evita locais movimentados. </li>
+                    <li>Segundo a tradição, procura assustar pessoas que andam sozinhas na madrugada. </li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Possui grande força física.</li>
+                    <li>Corre rapidamente</li>
+                    <li>Enxerga bem no escuro</li>
+                    <li>Em algumas versões, emite gritos assustadores para provocar medo. </li>
+                    <li>Desaparece rapidamente quando perseguido</li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                  Caçadores e moradores antigos relatavam ouvir gritos estranhos vindos da mata e encontrar pegadas incomuns. Alguns afirmavam ter visto uma criatura com cabeça de cabra desaparecer entre as árvores antes que pudessem se aproximar.  
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>O Cabra Cabriola ficou muito conhecido em jornais e histórias populares do século XIX. </li>
+                    <li>Existem versões da lenda em vários estados do Nordeste. </li>
+                    <li>Era usado como personagem para educar e disciplinar crianças</li>
+                    <li>É considerado um dos monstros mais famosos do folclore nordestino. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                    O Cabra Cabriola representa a tradição oral do Nordeste e mostra como as lendas eram utilizadas para transmitir ensinamentos e preservar costumes. Sua história continua sendo lembrada como parte importante da cultura popular potiguar. 
+                </p>  
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Assombração do Palácio do Campo das Princesas.png" alt="Ilustração do Assombracao_do_palacio_do_campo">
+                <figcaption>Ilustração do Assombracao_do_palacio_do_campo</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Assombracao_do_palacio_do_campo</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                  O Palácio do Campo das Princesas, sede do governo de Pernambuco, possui uma longa história. Com o passar dos anos, funcionários, vigilantes e visitantes passaram a relatar acontecimentos inexplicáveis, como passos, vozes e aparições
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                  A Assombração do Palácio do Campo das Princesas é descrita como uma figura humana transparente, vestida com roupas antigas. Alguns relatos falam de um homem, enquanto outros mencionam uma mulher caminhando pelos corredores do palácio. Em muitos casos, apenas uma sombra ou vulto é visto.  
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 O Palácio do Campo das Princesas, sede do governo de Pernambuco, possui uma longa história. Com o passar dos anos, funcionários, vigilantes e visitantes passaram a relatar acontecimentos inexplicáveis, como passos, vozes e aparições, dando origem à lenda de que o prédio seria assombrado por espíritos ligados ao passado   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Surge principalmente durante a madrugada. </li>
+                    <li>Caminha pelos corredores e salões históricos. </li>
+                    <li>Provoca sons de passos e portas abrindo. </li>
+                    <li>Desaparece rapidamente quando é observado</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Aparece e desaparece sem deixar rastros.</li>
+                    <li>Produz ruídos misteriosos</li>
+                    <li>Em algumas versões, movimenta objetos ou apaga luzes. </li>
+                    <li>Provoca sensação de frio e arrepios.</li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                   Embora não existam relatos de caçadores, vigilantes e funcionários afirmam ter ouvido passos em corredores vazios, visto vultos e sentido uma presença estranha durante o trabalho noturno. Alguns dizem que portas se abriram sozinhas e luzes piscaram sem explicação. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>O Palácio do Campo das Princesas foi inaugurado em 1841 e é um dos edifícios históricos mais importantes do Recife. </li>
+                    <li>A lenda faz parte das histórias de assombração mais conhecidas da capital pernambucana</li>
+                    <li>O prédio recebe visitantes e desperta curiosidade por sua história e arquitetura. </li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                   A Assombração do Palácio do Campo das Princesas faz parte do folclore urbano de Pernambuco. A lenda preserva as narrativas populares ligadas ao patrimônio histórico do Recife, fortalece a identidade cultural da cidade e desperta interesse pela história e pelos mistérios de um dos edifícios mais importantes do estado.  
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

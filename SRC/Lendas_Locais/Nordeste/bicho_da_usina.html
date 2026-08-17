@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sudeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Bicho da Usina Uruba.png" alt="Ilustração do bicho_da_usina">
+                <figcaption>Ilustração do bicho_da_usina</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">bicho_da_usina</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">bicho_da_usina</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                   A lenda surgiu entre antigos trabalhadores, moradores e viajantes da região da antiga Usina Uruba, em Atalaia, Alagoas. 
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-bicho_da_usina" aria-label="Informações sobre o bicho_da_usina">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 O Bicho da Usina Uruba é descrito como uma criatura de grande porte, coberta por pelos escuros, com braços longos, olhos avermelhados que brilham na escuridão e garras afiadas. Algumas versões afirmam que sua aparência mistura características humanas e animais, tornando sua figura ainda mais assustadora. Outros relatos dizem que ele surge apenas como uma enorme sombra que se move rapidamente entre as árvores. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 A lenda surgiu entre antigos trabalhadores, moradores e viajantes da região da antiga Usina Uruba, em Atalaia, Alagoas. Segundo a tradição popular, estranhos acontecimentos registrados nas proximidades da usina, como desaparecimentos de animais, sons misteriosos e aparições noturnas, deram origem à história de uma criatura que vive escondida nas matas ao redor do local. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Vive nas matas e áreas abandonadas próximas à antiga usina. </li>
+                    <li>Costuma aparecer durante a noite ou nas primeiras horas da madrugada. </li>
+                    <li>Evita locais com grande movimentação de pessoas.</li>
+                    <li>Move-se silenciosamente entre a vegetação.</li>
+                    <li>Permanece escondido durante o dia. </li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Possui grande força física. </li>
+                    <li>Corre com extrema velocidade.</li>
+                    <li>Move-se sem produzir ruídos.</li>
+                    <li>Desaparece rapidamente entre a mata quando é observado. </li>
+                    <li>Em algumas versões, seus gritos assustam animais e pessoas que se aproximam da região. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                   Moradores, vigilantes e antigos trabalhadores contam que ouviram gritos, passos pesados e galhos sendo quebrados durante a noite. Alguns afirmam ter visto uma grande criatura atravessando estradas ou desaparecendo rapidamente entre a vegetação. Outros relatam sentir uma forte sensação de medo e perceber que estavam sendo observados, mesmo sem encontrar ninguém.  
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A lenda é uma das histórias de mistério mais conhecidas da região da antiga Usina Uruba.</li>
+                    <li>Existem diversas versões sobre a aparência da criatura. </li>
+                    <li>Alguns acreditam que ela protege o local e afasta curiosos. </li>
+                    <li>A narrativa continua sendo transmitida oralmente entre moradores da região. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                   O Bicho da Usina Uruba faz parte do imaginário popular de Alagoas e representa as histórias de mistério preservadas pelas comunidades locais. A lenda fortalece a tradição oral, valoriza a memória da antiga Usina Uruba e contribui para manter viva uma das narrativas mais conhecidas do folclore regional. 
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

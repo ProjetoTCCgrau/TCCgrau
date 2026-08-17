@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Botija Encantada.png" alt="Ilustração do Botija_encantada">
+                <figcaption>Ilustração do Corpo-Seco</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do Nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Botija_encantada</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 A lenda nasceu durante o período colonial, quando muitas pessoas escondiam suas riquezas para protegê-las de guerras, invasões ou roubos.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Botija_encantada">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                    A Botija Encantada é descrita como um pote de barro cheio de moedas de ouro, joias e objetos valiosos, enterrado no solo. Segundo a lenda, sua presença é anunciada por uma luz brilhante que surge durante a noite sobre o local onde o tesouro está escondido.
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                  A lenda nasceu durante o período colonial, quando muitas pessoas escondiam suas riquezas para protegê-las de guerras, invasões ou roubos. Com o passar do tempo, surgiram histórias de que esses tesouros ficaram encantados e passaram a ser protegidos por forças sobrenaturais.  
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Permanece enterrada por muitos anos.</li>
+                    <li>Costuma revelar sua localização por meio de luzes misteriosas. </li>
+                    <li>Aparece principalmente durante a madrugada. </li>
+                    <li>Em algumas versões, muda de lugar para evitar ser encontrada</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>É protegida por encantamentos. </li>
+                    <li>Confunde quem tenta encontrá-la por ganância</li>
+                    <li>Algumas histórias afirmam que espíritos guardam o tesouro. </li>
+                    <li>O encanto desaparece apenas para pessoas honestas e de bom coração. </li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                 Caçadores, agricultores e viajantes contam que já seguiram luzes brilhantes acreditando ter encontrado a Botija Encantada. Porém, ao cavarem o local, o tesouro desaparecia ou nunca era encontrado, como se estivesse protegido por um feitiço.  .
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A lenda da Botija Encantada existe em vários estados do Nordeste. </li>
+                    <li>Muitas pessoas acreditavam que sonhos indicavam o local exato do tesouro. </li>
+                    <li>Algumas tradições afirmam que era necessário realizar um ritual para quebrar o encantamento. </li>
+                    <li>A história continua sendo contada em comunidades rurais. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                  A Botija Encantada é uma das lendas mais tradicionais do Rio Grande do Norte e do Nordeste. Ela preserva a memória do período colonial, incentiva a tradição oral e transmite ensinamentos sobre honestidade, humildade e o perigo da ganância, mantendo viva um importante parte do folclore brasileiro.   
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>
