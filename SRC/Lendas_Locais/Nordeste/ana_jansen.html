@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Ana Jansen.png" alt="Ilustração da ana_jansen">
+                <figcaption>Ilustração do nordeste</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">ana_jansen</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                  A lenda é inspirada em Ana Joaquina Jansen Pereira, personagem real da história do Maranhão. Rica proprietária de terras e de pessoas escravizadas, ela ficou conhecida por seu grande poder e por sua personalidade rígida  
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o ana_jansen">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                 Ana Jansen é descrita como uma mulher elegante, de pele muito clara, cabelos escuros presos e vestida com roupas luxuosas do século XIX. Após sua morte, seu espírito passou a ser visto em uma carruagem antiga, puxada por cavalos negros ou sem cabeça, acompanhada por figuras misteriosas.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                  A lenda é inspirada em Ana Joaquina Jansen Pereira, personagem real da história do Maranhão. Rica proprietária de terras e de pessoas escravizadas, ela ficou conhecida por seu grande poder e por sua personalidade rígida. Após sua morte, surgiram histórias de que seu espírito vagava pelas ruas de São Luís como forma de pagar pelos sofrimentos que teria causado em vida. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Aparece principalmente durante a madrugada. </li>
+                    <li>Percorre as ruas antigas do centro histórico de São Luís</li>
+                    <li>Surge em noites silenciosas e desaparece rapidamente.</li>
+                    <li>É vista dentro de uma carruagem antiga cercada por uma atmosfera sombria. </li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Surge e desaparece misteriosamente. </li>
+                    <li>A carruagem faz barulho mesmo sem deixar marcas no chão. </li>
+                    <li>Algumas pessoas relatam sentir um intenso frio quando ela passa. </li>
+                    <li>Em algumas versões, sua aparição é considerada um aviso ou um mau presságio. </li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                 Antigamente, viajantes e moradores que passavam pelas ruas durante a madrugada afirmavam ouvir o som dos cascos dos cavalos e das rodas da carruagem. Ao olhar para trás, viam Ana Jansen passando lentamente. Quando tentavam segui-la, a carruagem desaparecia sem deixar qualquer sinal. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A lenda é baseada em uma personagem histórica que realmente existiu. </li>
+                    <li>Ana Jansen viveu entre os séculos XVIII e XIX. </li>
+                    <li>É uma das histórias de assombração mais famosas do Maranhão</li>
+                    <li>A carruagem fantasma faz parte do imaginário popular de São Luís há muitas gerações. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                   A lenda de Ana Jansen mistura história e folclore, tornando-se um dos maiores símbolos culturais do Maranhão. Ela ajuda a preservar a memória da cidade de São Luís e desperta interesse pelo período colonial e pela tradição oral maranhense.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

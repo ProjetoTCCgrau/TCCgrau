@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Cobra da Igreja de São Cristóvão.png" alt="Ilustração do cobra_da_igreja_de_sao_cristovao">
+                <figcaption>Ilustração do cobra_da_igreja_de_sao_cristovao</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">cobra_da_igreja_de_sao_cristovao</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 A lenda surgiu entre os moradores da cidade histórica de São Cristóvão. Conta-se que a cobra vive sob a igreja desde sua construção e que cresce continuamente.  
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o cobra_da_igreja_de_sao_cristovao">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                  A Cobra da Igreja de São Cristóvão é descrita como uma serpente gigantesca, de escamas escuras e olhos brilhantes. Segundo a tradição, ela vive escondida sob os alicerces de uma antiga igreja da cidade, permanecendo adormecida na maior parte do tempo.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                 A lenda surgiu entre os moradores da cidade histórica de São Cristóvão. Conta-se que a cobra vive sob a igreja desde sua construção e que cresce continuamente. Algumas versões afirmam que, caso desperte completamente ou consiga sair de seu esconderijo, poderá causar grandes destruições na cidade.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Permanece escondida sob a igreja. </li>
+                    <li>Aparece apenas em momentos de grande silêncio ou durante a noite. </li>
+                    <li>Evita o contato com as pessoas. </li>
+                    <li>Em algumas histórias, movimenta-se lentamente sob o solo</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Possui força gigantesca. </li>
+                    <li>Pode provocar tremores e rachaduras no chão. </li>
+                    <li>Desaparece rapidamente nas profundezas da terra. </li>
+                    <li>É considerada uma criatura sobrenatural e quase impossível de ser derrotada. </li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                   Moradores antigos, vigias e visitantes contam que ouviram sons vindos do subsolo da igreja ou sentiram pequenas vibrações no chão. Alguns afirmam ter visto parte do corpo da enorme serpente desaparecer entre rachaduras antes que pudesse ser observada completamente. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>São Cristóvão é uma das cidades mais antigas do Brasil. </li>
+                    <li>A lenda é transmitida oralmente há muitas gerações.</li>
+                    <li>Existem diferentes versões sobre o tamanho da serpente. </li>
+                    <li>A história faz parte do rico folclore sergipano. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                A Cobra da Igreja de São Cristóvão preserva a tradição popular e desperta interesse pela história da cidade. A lenda reforça a identidade cultural de Sergipe e mantém vivas as narrativas ligadas ao patrimônio histórico local   
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

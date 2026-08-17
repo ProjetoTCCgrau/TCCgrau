@@ -1,11 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\A Caipora.png" alt="Ilustração da caipora">
+                <figcaption>Ilustração da caipora</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">caipora</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                  A lenda tem origem na mitologia indígena tupi-guarani. O nome vem do tupi caapora, que significa "habitante do mato"
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secao" aria-label="Informações sobre a caipora">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                  A Caipora é geralmente descrita como uma pequena indígena de cabelos longos e avermelhados. Em algumas regiões, aparece como um menino indígena. É forte, ágil e, em certas versões, monta um caititu (porco-do-mato).  
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                  A lenda tem origem na mitologia indígena tupi-guarani. O nome vem do tupi caapora, que significa "habitante do mato". É uma das lendas mais antigas do Brasil, com registros desde o século XVI. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Vive nas florestas e matas fechadas. </li>
+                    <li>Protege os animais silvestres.</li>
+                    <li>Castiga caçadores que matam por diversão ou em excesso</li>
+                    <li>Gosta de andar pela mata durante a noite. </li>
+                    <li>Em algumas versões, aprecia fumo e cachaça oferecidos como forma de respeito. </li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Possui grande força e velocidade. </li>
+                    <li>Comunica-se com os animais.</li>
+                    <li>Faz caçadores se perderem na floresta</li>
+                    <li>Cria ilusões e confunde rastros.</li>
+                    <li>Pode trazer azar a quem desrespeita a natureza. </li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                   Segundo a tradição, caçadores que desrespeitam a floresta ou caçam além do necessário ouvem assobios, veem sombras e acabam perdendo o caminho. Alguns dizem que a Caipora assusta os cães de caça, esconde os animais e faz as armas falharem. Em algumas regiões, era costume deixar um pedaço de fumo antes de entrar na mata para evitar sua ira. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>É considerada uma das principais personagens do folclore brasileiro. </li>
+                    <li>Em algumas regiões, é vista como uma versão feminina do Curupira; em outras, são personagens diferentes</li>
+                    <li>Sua lenda está presente em quase todo o Brasil, com pequenas variações na aparência e nos costumes. </li>
+                    <li>O respeito à Caipora simboliza o respeito à natureza e aos animais. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                   A Caipora representa a proteção da fauna e das florestas brasileiras. Sua lenda ensina que a caça deve ser feita apenas para a sobrevivência, nunca por ganância ou diversão. Por isso, tornou-se um importante símbolo da preservação ambiental e da rica tradição indígena presente no folclore brasileiro.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

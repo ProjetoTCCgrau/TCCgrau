@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="nordeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Cidade_Encantada_de_Jericoacoara.png" alt="Ilustração do cidade_encantada_de_jerico">
+                <figcaption>Ilustração do cidade_encantada_de_jerico</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">Cidade_Encantada_de_Jericoacoara</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                   A lenda faz parte do folclore cearense e surgiu entre os moradores de Jericoacoara. Segundo a tradição, uma princesa foi vítima de um poderoso encantamento e ficou presa na cidade subterrânea
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o Corpo-Seco">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-secao">
+                <h2>Aparência</h2>
+                <p>
+                  A Cidade Encantada é descrita como um reino subterrâneo repleto de palácios, torres e grandes riquezas, escondido sob o Morro do Farol, em Jericoacoara. Nesse lugar vive uma princesa encantada, transformada em uma serpente de escamas de ouro, mantendo apenas a cabeça e os pés de mulher.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-secao">
+                <h2>Origem da criatura</h2>
+                <p>
+                  A lenda faz parte do folclore cearense e surgiu entre os moradores de Jericoacoara. Segundo a tradição, uma princesa foi vítima de um poderoso encantamento e ficou presa na cidade subterrânea, protegida por um enorme portão de ferro localizado no interior de uma caverna acessível apenas durante a maré baixa.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Vive na cidade escondida sob o Morro do Farol. </li>
+                    <li>Permanece encantada na forma de serpente. </li>
+                    <li>Aguarda alguém capaz de quebrar a maldição.</li>
+                    <li>Raramente é vista, e sua presença é percebida por sons misteriosos vindos da caverna. </li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Possui um poderoso encantamento que protege a cidade. </li>
+                    <li>Seu corpo de serpente dourada inspira medo e respeito. </li>
+                    <li>A cidade permanece invisível para a maioria das pessoas.</li>
+                    <li>Apenas um ato específico de coragem poderia desfazer a maldição e revelar a cidade.</li>
+                    <li></li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-secao">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                  Pescadores, aventureiros e caçadores contam que, durante a maré baixa, encontravam a entrada da caverna, mas eram impedidos de seguir pelo enorme portão de ferro. Alguns relatam ouvir cantos, vozes e sons de animais vindos do interior, sem nunca conseguir alcançar a cidade encantada. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-secao">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>A entrada da cidade estaria em uma caverna próxima ao mar, visível apenas quando a maré está baixa.</li>
+                    <li>Existem diferentes versões sobre como quebrar o encantamento da princesa</li>
+                    <li>A lenda é uma das mais famosas do folclore do Ceará.</li>
+                    <li>Ela inspirou livros, programas de televisão, animações e apresentações culturais. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                 
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>

@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpo-Seco</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
 </head>
+<!--
+   MOLDE DE PÁGINA DE LENDA LOCAL
+
+        Para criar outra página:
+        1. Copie o codigo da pagina.
+        2. Troque as informações dessa pagina do codigo do molde para a lenda que esta trabalhando.
+    -->
 <body>
-    
+    <header>
+        <img class="logo" src="../../img/logo_obscurium1.png" alt="Logo do Obscurium">
+
+        <nav aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="../../mapa_interativo/mapa.html">Mapa</a>
+        </nav>
+    </header>
+
+    <main class="container pagina-lenda">
+        <!-- Link para voltar para a região. -->
+        <a class="lenda-voltar" href="sudeste.html">← Voltar para a região</a>
+
+        <!-- =====================================================
+             APRESENTAÇÃO DA LENDA
+             ===================================================== -->
+        <section class="lenda-hero" aria-labelledby="titulo-lenda">
+            <figure>
+                <!--
+                    TROQUE A IMAGEM AQUI em cada nova lenda.
+                    Siga o exemplo do caminho para a imagem aparecer: ../../img/nome_da_imagem.png
+                -->
+                <img src="SRC\img\Caboclo-d'Água-do-Rio-São-Francisco.png" alt="Ilustração do caboclo_dAgua">
+                <figcaption>Ilustração do caboclo_dAgua</figcaption>
+            </figure>
+
+            <div class="lenda-hero-conteudo">
+                <!-- Troque a região quando criar uma lenda de outra região. -->
+                <p class="lenda-regiao">Lenda do nordeste</p>
+
+                <!-- Troque o nome da lenda. -->
+                <h1 id="titulo-lenda">caboclo_dAgua</h1>
+
+                <!--
+                    Resumo curto da lenda.
+                    Para outra página, substitua este parágrafo por um resumo da nova lenda.
+                -->
+                <p class="lenda-resumo">
+                 A lenda surgiu entre as comunidades ribeirinhas do Rio São Francisco, principalmente na Bahia.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             Informações detalhadas da lenda
+             ===================================================== -->
+        <section class="lenda-secoes" aria-label="Informações sobre o caboclo_dAgua">
+            <!-- SEÇÃO 1: APARÊNCIA -->
+            <article class="lenda-caboclo_dAgua">
+                <h2>Aparência</h2>
+                <p>
+                 O Caboclo d'Água é descrito como um pequeno ser de pele escura ou esverdeada, corpo forte, cabelos longos e olhos brilhantes. Em algumas versões, possui pés e mãos com membranas, o que facilita sua locomoção na água.   
+                </p>
+            </article>
+
+            <!-- SEÇÃO 2: ORIGEM DA LENDA -->
+            <article class="lenda-caboclo_dAgua">
+                <h2>Origem da criatura</h2>
+                <p>
+                A lenda surgiu entre as comunidades ribeirinhas do Rio São Francisco, principalmente na Bahia. Faz parte da tradição oral e nasceu das histórias contadas por pescadores para explicar acontecimentos misteriosos nos rios e incentivar o respeito às águas.  
+                </p>
+            </article>
+
+            <!-- SEÇÃO 3: HÁBITOS E PODERES -->
+            <article class="lenda-caboclo_dAgua lenda-caboclo_dAgua--ampla">
+                <h2>Hábitos e poderes</h2>
+
+                <h3>Hábitos</h3>
+                <ul>
+                    <li>Vive nas águas profundas do Rio São Francisco. </li>
+                    <li>Costuma aparecer ao amanhecer, ao entardecer ou durante a noite. </li>
+                    <li>Observa pescadores e viajantes que passam pelo rio</li>
+                    <li>Defende o rio e os animais aquáticos contra quem causa destruição</li>
+                </ul>
+
+                <h3>Força e poderes</h3>
+                <ul>
+                    <li>Possui grande força física. </li>
+                    <li>Nada com extrema velocidade</li>
+                    <li>Consegue permanecer submerso por muito tempo. </li>
+                    <li>Pode provocar ondas, virar pequenas embarcações e desaparecer rapidamente nas águas. </li>
+                    <li>Em algumas versões, controla parte das águas do rio para proteger a natureza. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 4: ENCONTRO COM PESSOAS (caso não tenha isso no docs, basta apagar essa  parte) -->
+            <article class="lenda-caboclo_dAgua">
+                <h2>Encontro com pessoas</h2>
+                <!--
+                    Preencha esta seção ao criar ou pesquisar uma lenda.
+                    Conte onde a pessoa encontrou a criatura, quais sinais percebeu,
+                    como a criatura agiu e como o encontro terminou.
+                -->
+                <p>
+                   Segundo a tradição, pescadores e caçadores relatam ouvir assobios, risadas ou barulhos estranhos vindos da água. Alguns afirmam que suas canoas balançavam sem motivo aparente ou que o Caboclo d'Água aparecia para assustar quem pescava em excesso ou desrespeitava o rio. 
+                </p>
+            </article>
+
+            <!-- SEÇÃO 5: CURIOSIDADES -->
+            <article class="lenda-caboclo_dAgua">
+                <h2>Curiosidades</h2>
+                <ul>
+                    <li>Também é conhecido, em algumas regiões, como Caboclinho d'Água ou Negro d'Água. </li>
+                    <li>A lenda é bastante conhecida entre os moradores das margens do Rio São Francisco. </li>
+                    <li>Em algumas tradições, deixar fumo como oferenda era uma forma de evitar suas travessuras. </li>
+                    <li>É considerado um dos principais protetores das águas no folclore do Nordeste. </li>
+                </ul>
+            </article>
+
+            <!-- SEÇÃO 6: IMPORTÂNCIA CULTURAL -->
+            <article class="lenda-secao lenda-secao--ampla">
+                <h2>Importância cultural</h2>
+                <p>
+                  O Caboclo d'Água é um importante símbolo do folclore do Rio São Francisco. Sua lenda reforça a necessidade de preservar os rios, respeitar a natureza e utilizar os recursos naturais de forma consciente. Além disso, mantém viva a tradição oral das comunidades ribeirinhas, transmitindo conhecimentos e valores de geração em geração.  
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Obscurium</p>
+    </footer>
 </body>
 </html>
